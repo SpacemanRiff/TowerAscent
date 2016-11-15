@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 2d5fe30eaf7bdf548a53d1ec686b506f
+timeCreated: 1477335525
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Camera
+    100004: indexKnuckleOneLeft
+    100006: indexKnuckleOneRight
+    100008: indexKnuckleTwoLeft
+    100010: indexKnuckleTwoRight
+    100012: indexPalmLeft
+    100014: indexPalmRight
+    100016: indexTip
+    100018: indexTip_end
+    100020: indexTipLeft
+    100022: indexTipLeft_end
+    100024: indexWristLeft
+    100026: indexWristRight
+    100028: Lamp
+    100030: leftArm
+    100032: leftArmBones
+    100034: middleKnuckleOneLeft
+    100036: middleKnuckleOneRight
+    100038: middleKnuckleTwoLeft
+    100040: middleKnuckleTwoRight
+    100042: middlePalmLeft
+    100044: middlePalmRight
+    100046: middleTip
+    100048: middleTip_end
+    100050: middleTipLeft
+    100052: middleTipLeft_end
+    100054: middleWristLeft
+    100056: middleWristRight
+    100058: pinkyKnuckleOneLeft
+    100060: pinkyKnuckleOneRight
+    100062: pinkyKnuckleTwoLeft
+    100064: pinkyKnuckleTwoRight
+    100066: pinkyPalmLeft
+    100068: pinkyPalmRight
+    100070: pinkyTipLeft
+    100072: pinkyTipLeft_end
+    100074: pinkyTipRight
+    100076: pinkyTipRight_end
+    100078: pinkyWristLeft
+    100080: pinkyWristRight
+    100082: rightArm
+    100084: rightArmBones
+    100086: ringKnuckleOneLeft
+    100088: ringKnuckleOneRight
+    100090: ringKnuckleTwoLeft
+    100092: ringKnuckleTwoRight
+    100094: ringPalmLeft
+    100096: ringPalmRight
+    100098: ringTip
+    100100: ringTip_end
+    100102: ringTipLeft
+    100104: ringTipLeft_end
+    100106: ringWristLeft
+    100108: ringWristRight
+    100110: thumbKnuckleLeft
+    100112: thumbKnuckleRight
+    100114: thumbTipLeft
+    100116: thumbTipLeft_end
+    100118: thumbTipRight
+    100120: thumbTipRight_end
+    100122: thumbWristLeft
+    100124: thumbWristRight
+    400000: //RootNode
+    400002: Camera
+    400004: indexKnuckleOneLeft
+    400006: indexKnuckleOneRight
+    400008: indexKnuckleTwoLeft
+    400010: indexKnuckleTwoRight
+    400012: indexPalmLeft
+    400014: indexPalmRight
+    400016: indexTip
+    400018: indexTip_end
+    400020: indexTipLeft
+    400022: indexTipLeft_end
+    400024: indexWristLeft
+    400026: indexWristRight
+    400028: Lamp
+    400030: leftArm
+    400032: leftArmBones
+    400034: middleKnuckleOneLeft
+    400036: middleKnuckleOneRight
+    400038: middleKnuckleTwoLeft
+    400040: middleKnuckleTwoRight
+    400042: middlePalmLeft
+    400044: middlePalmRight
+    400046: middleTip
+    400048: middleTip_end
+    400050: middleTipLeft
+    400052: middleTipLeft_end
+    400054: middleWristLeft
+    400056: middleWristRight
+    400058: pinkyKnuckleOneLeft
+    400060: pinkyKnuckleOneRight
+    400062: pinkyKnuckleTwoLeft
+    400064: pinkyKnuckleTwoRight
+    400066: pinkyPalmLeft
+    400068: pinkyPalmRight
+    400070: pinkyTipLeft
+    400072: pinkyTipLeft_end
+    400074: pinkyTipRight
+    400076: pinkyTipRight_end
+    400078: pinkyWristLeft
+    400080: pinkyWristRight
+    400082: rightArm
+    400084: rightArmBones
+    400086: ringKnuckleOneLeft
+    400088: ringKnuckleOneRight
+    400090: ringKnuckleTwoLeft
+    400092: ringKnuckleTwoRight
+    400094: ringPalmLeft
+    400096: ringPalmRight
+    400098: ringTip
+    400100: ringTip_end
+    400102: ringTipLeft
+    400104: ringTipLeft_end
+    400106: ringWristLeft
+    400108: ringWristRight
+    400110: thumbKnuckleLeft
+    400112: thumbKnuckleRight
+    400114: thumbTipLeft
+    400116: thumbTipLeft_end
+    400118: thumbTipRight
+    400120: thumbTipRight_end
+    400122: thumbWristLeft
+    400124: thumbWristRight
+    4300000: leftArm
+    4300002: rightArm
+    9500000: //RootNode
+    13700000: leftArm
+    13700002: rightArm
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
