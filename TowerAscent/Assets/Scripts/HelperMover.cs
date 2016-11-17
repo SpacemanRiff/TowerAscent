@@ -8,12 +8,10 @@ public class HelperMover : MonoBehaviour {
 	public float horizontalMoveSpeed = 5;
 	public float verticalMoveSpeed = 5;
 	public float maxHeight = 30;
-	private Vector3 centerPosition;
 	private Rigidbody rb;
 
 	// Use this for initialization
 	void Start () {
-		centerPosition = centerOfRotation.position;
 		rb = GetComponent<Rigidbody>();
 	}
 	
@@ -34,7 +32,6 @@ public class HelperMover : MonoBehaviour {
 			rb.AddForce(transform.right * horizontalMoveSpeed);
 		}
 		float angle = (transform.localEulerAngles.x > 180) ? transform.localEulerAngles.x - 360 : transform.localEulerAngles.x;
-		print(angle);
 		if(Input.GetKey(KeyCode.UpArrow) && angle < 30) {
 			//Move player up
 			rb.AddForce(transform.up * verticalMoveSpeed);
@@ -46,10 +43,10 @@ public class HelperMover : MonoBehaviour {
 	}
 
 	private void RotateToFaceCenter() {
-		transform.LookAt(centerPosition);
+		transform.LookAt(centerOfRotation.position);
 	}
 
 	private float GetDistanceFromCenter() {
-		return Vector3.Distance(transform.position, centerPosition);
+		return Vector3.Distance(transform.position, centerOfRotation.position);
 	}
 }

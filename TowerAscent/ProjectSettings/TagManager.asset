@@ -14,6 +14,7 @@ TagManager:
   - Next
   - Prev
   - Play
+  - Helper
   layers:
   - Default
   - TransparentFX
