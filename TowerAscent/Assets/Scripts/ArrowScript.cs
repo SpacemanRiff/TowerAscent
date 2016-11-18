@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ArrowScript : MonoBehaviour {
 	
-	public Texture2D crosshairImage;
 	private string controllerTag = "VRController";
 	private string towerTag = "Tower";
 	private Rigidbody rb;
@@ -29,11 +28,7 @@ public class ArrowScript : MonoBehaviour {
 		}
 	}
 
-	void OnGUI() {
-		float xMin = (Screen.width - Input.mousePosition.x) - (crosshairImage.width / 2);
-		float yMin = (Screen.height - Input.mousePosition.y) - (crosshairImage.height / 2);
-		GUI.DrawTexture(new Rect(xMin, yMin, crosshairImage.width, crosshairImage.height), crosshairImage);
-	}
+
 
 	private void StartDegrading() {
 		//Slowly start rotating down for X ammount of time
