@@ -25,18 +25,18 @@ public class HelperMover : MonoBehaviour {
 	}
 
 	private void MovePlayer() {
-		if(Input.GetKey(KeyCode.LeftArrow)) {
+		if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
 			//Move player left
 			rb.AddForce(transform.right * -1 * horizontalMoveSpeed);
-		} else if(Input.GetKey(KeyCode.RightArrow)) {
+		} else if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
 			//Move player right
 			rb.AddForce(transform.right * horizontalMoveSpeed);
 		}
 		float angle = (transform.localEulerAngles.x > 180) ? transform.localEulerAngles.x - 360 : transform.localEulerAngles.x;
-		if(Input.GetKey(KeyCode.UpArrow) && angle < 30) {
+		if((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && angle < 30) {
 			//Move player up
 			rb.AddForce(transform.up * verticalMoveSpeed);
-		} else if(Input.GetKey(KeyCode.DownArrow) && transform.localPosition.y > lowHeightLimit) {
+		} else if((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && transform.localPosition.y > lowHeightLimit) {
 			//Move player down
 			rb.AddForce(transform.up * -1 * verticalMoveSpeed);
 		}
