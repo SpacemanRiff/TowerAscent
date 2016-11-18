@@ -5,7 +5,7 @@ public class SeeFarther : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Terrain.activeTerrain.detailObjectDistance = 500;
+		Terrain.activeTerrain.detailObjectDistance = 250;
 	}
 	
 	// Update is called once per frame

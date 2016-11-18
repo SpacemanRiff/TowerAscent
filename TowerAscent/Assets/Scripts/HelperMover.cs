@@ -8,6 +8,7 @@ public class HelperMover : MonoBehaviour {
 	public float horizontalMoveSpeed = 5;
 	public float verticalMoveSpeed = 5;
 	public float maxHeight = 30;
+	public float lowHeightLimit = 5;
 	private Rigidbody rb;
 
 	// Use this for initialization
@@ -35,7 +36,7 @@ public class HelperMover : MonoBehaviour {
 		if(Input.GetKey(KeyCode.UpArrow) && angle < 30) {
 			//Move player up
 			rb.AddForce(transform.up * verticalMoveSpeed);
-		} else if(Input.GetKey(KeyCode.DownArrow)) {
+		} else if(Input.GetKey(KeyCode.DownArrow) && transform.localPosition.y > lowHeightLimit) {
 			//Move player down
 			rb.AddForce(transform.up * -1 * verticalMoveSpeed);
 		}
