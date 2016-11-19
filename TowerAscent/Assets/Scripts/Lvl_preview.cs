@@ -1,19 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Lvl_preview : MonoBehaviour {
 
 	public GameObject[] previews;
 	public GameObject current;
-	static int i;
+	static int i = 0;
 	public string[] scene;
 	static int timer = 0;
+	public Text LevelText;
+	public static string levelName = "";
+    public lbReceive reciever;
+    public string[] levelNames;
+
 	// Use this for initialization
-	void Start () {
-		current = previews [i];
+	void Start() {
+		current = previews[i];
 		current.SetActive (true);
-	}
+        reciever.levelName = levelNames[i];
+        reciever.loadLeaderboard();
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -30,10 +38,12 @@ public class Lvl_preview : MonoBehaviour {
 			} else {
 				i = 0;
 			}
-			Debug.Log ("only 1");
+			
 			current.SetActive (false);
 			current = previews [i];
 			current.SetActive (true);
+            reciever.levelName = levelNames[i];
+            reciever.loadLeaderboard();
 			timer = 15;
 		}
 
@@ -47,7 +57,9 @@ public class Lvl_preview : MonoBehaviour {
 			current.SetActive (false);
 			current = previews [i];
 			current.SetActive (true);
-			timer = 15;
+            reciever.levelName = levelNames[i];
+            reciever.loadLeaderboard();
+            timer = 15;
 		}
 
 		if (tag == "Play" && other.tag == "VRController" && timer == 0) {
@@ -55,6 +67,9 @@ public class Lvl_preview : MonoBehaviour {
 			SceneManager.UnloadScene("MainMenu");
 			timer = 15;
 		}
+
+		levelName = scene [i];
+		LevelText.text = levelName;
 
 	}
 }

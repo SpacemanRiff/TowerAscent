@@ -22,6 +22,8 @@ public class HandMovementRight : MonoBehaviour {
     public bool gripButtonPressed = false;
     private bool colliding;
 
+
+    private Valve.VR.EVRButtonId touchpad = Valve.VR.EVRButtonId.k_EButton_DPad_Up;
     public HandMovementLeft otherHand;
 
 
@@ -34,6 +36,9 @@ public class HandMovementRight : MonoBehaviour {
     public bool triggerButtonDown = false;
     public bool triggerButtonUp = false;
     public bool triggerButtonPressed = false;
+    
+
+    public bool TouchPadButtonDown = false;
     private Quaternion gripRotation, thumbRotation, thumbKnuckleRotation, 
         gripKnuckleOneRotation, gripKnuckleTwoRotation, thumbWristRotation;
 
@@ -52,11 +57,14 @@ public class HandMovementRight : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         //check for grip button, then close grip fingers and thumb
+        //Debug.Log(touchpad.ToString());
 
         if (controller == null) {
             Debug.Log("Controller not initialized");
             return;
         }
+        //TouchPadButtonDown = controller.GetAxis(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad);
+        //Debug.Log(TouchPadButtonDown);
 
         restartButtonDown = controller.GetPressDown(restartButton);
 

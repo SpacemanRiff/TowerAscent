@@ -14,25 +14,31 @@ public class MoveTo : MonoBehaviour {
 	public GameObject player;
 	public int destPoint;
 	private Animator animator;
-	private YOYOUBEENSPOTTED spotScript;
+	public YOYOUBEENSPOTTED spotScript;
 	private SceneManagement manager;
 	private Fading fader;
 	private bool huntingPlayer;
 
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
-		agent.destination = navPoints [destPoint].position; //Go to the first position without waiting.
+        if (navPoints.Length > 0)
+        {
+            agent.destination = navPoints [destPoint].position; //Go to the first position without waiting.
+        }
 		animator = GetComponent<Animator>();
 		animator.SetBool ("Moving", true);
-		spotScript = GetComponent<YOYOUBEENSPOTTED> ();
 		huntingPlayer = false;
 		manager = GetComponent<SceneManagement> ();
 		fader = GetComponent<Fading> ();
 	}
 
 	private void MoveToNextPoint(){
-		agent.destination = navPoints [destPoint].position;
-		destPoint = (destPoint + 1) % navPoints.Length;
+        if (navPoints.Length > 0)
+        {
+            agent.destination = navPoints[destPoint].position;
+		    destPoint = (destPoint + 1) % navPoints.Length;
+        }
+        
 	}
 
 	//Stop the patrol route and go look for the player.
@@ -63,7 +69,6 @@ public class MoveTo : MonoBehaviour {
 	}
 
 	void Update(){
-		Debug.Log ("MoveTo/Spotted?: " + spotScript.getSpotted ());
 		if (spotScript.getSpotted() && !huntingPlayer) {
 			StartCoroutine( playerSpotted () );
 		}
@@ -74,7 +79,11 @@ public class MoveTo : MonoBehaviour {
 		if (huntingPlayer) {
 			if (agent.remainingDistance <= .5f) {
 				huntingPlayer = false;
-				agent.destination = navPoints [destPoint].position;
+                if (navPoints.Length > 0)
+                {
+                    agent.destination = navPoints [destPoint].position;
+                }
+				
 			}
 		}
 	}

@@ -11,7 +11,7 @@ public class YOYOUBEENSPOTTED : MonoBehaviour {
 	int layerMask;
 	public Vector3 raycastAdjustSettings;
 	public string tagToCheckAgainst;
-	public bool playerHasBeenSpotted;
+    public bool playerHasBeenSpotted = false;
     public Timer timer;
     public AudioClip alertSound;
 
@@ -28,7 +28,7 @@ public class YOYOUBEENSPOTTED : MonoBehaviour {
 		//FOLLOWING IS NECESSARY FOR LAYERMASK FILTERING OF RAYCAST
 
 		// Bit shift the index of the layer (8) to get a bit mask
-		layerMask = 1 << 8;
+		layerMask = 1 << 2;
 
 		// This would cast rays only against colliders in layer 8.
 		// But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.

@@ -24,18 +24,4 @@ public class Fading : MonoBehaviour {
 		fadeDir = direction;
 		return (fadeSpeed);			//Allows another script to have the speed it takes to fade in.
 	}
-
-	void OnEnable(){
-		SceneManager.sceneLoaded += OnLevelFinishedLoading;
-	}
-
-	void OnDisable(){
-		SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-	}
-
-	void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode){
-		Debug.Log ("Level loaded");
-		Debug.Log (scene.name);
-		Debug.Log (mode);
-	}
 }

@@ -5,14 +5,15 @@ using System.Collections.Generic;
 public class ArcherShooting : MonoBehaviour {
 
 	public Texture2D crosshairImage;
-	public const float crosshairMaxSize = 100.0f;
-	public const float crosshairMinSize = 25.0f;
+	public const float crosshairMaxSize = 50.0f;
+	public const float crosshairMinSize = 0.1f;
 	public float scalingSpeed = 0.01f;
 	public float maxForce = 2.0f;
 	public float scaleMinimum = 0.7f;
 	public float arrowSpeed = 10.0f;
 	public int maxNumberOfArrows = 4;
 	public GameObject arrow;
+    private Camera helperCamera;
 
 	private float currentScale;
 	private float currentForce;
@@ -23,6 +24,7 @@ public class ArcherShooting : MonoBehaviour {
 	void Start () {
 		currentScale = 1;
 		currentForce = 0;
+        helperCamera = GameObject.FindGameObjectWithTag("HelperCamera").GetComponent<Camera>();
 	}
 	
 	// Update is called once per frame
@@ -35,7 +37,7 @@ public class ArcherShooting : MonoBehaviour {
 		}
 		if(Input.GetMouseButtonUp(0)) {
 			Vector3 currentMousePosition = Input.mousePosition;
-			Vector3 placeToGo = Camera.main.ScreenToWorldPoint(new Vector3(currentMousePosition.x, currentMousePosition.y, zOffset));
+			Vector3 placeToGo = helperCamera.ScreenToWorldPoint(new Vector3(currentMousePosition.x, currentMousePosition.y, zOffset));
 			if(arrowsInGame.Count > maxNumberOfArrows) {
 				GameObject arrowToDestroy = (GameObject)arrowsInGame.Dequeue();
 				GameObject.Destroy(arrowToDestroy);

@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour {
     public float time = 0.0f;
     public int timeMinute =0 , timeSecond = 0;
     public Text TimerText = null;
-    bool stopped;
+	public bool stopped = true;
     bool finished;
     public GameObject rig;
     public GameObject lightArray;
@@ -17,8 +17,9 @@ public class Timer : MonoBehaviour {
     public HandMovementLeft LeftHand;
     public HandMovementRight RightHand;
     public VRTK_InteractGrab LeftHandGrasp, RightHandGrasp;
+    //public FileInputOutput FIO;
 
-	void Start () {
+    void Start () {
         rigPos = rig.transform.position;
         stopped = true;
         finished = false;
@@ -68,6 +69,10 @@ public class Timer : MonoBehaviour {
             LeftHandGrasp.ForceRelease();
         }
         StopTime();
+
+		//FIO = GameObject.FindGameObjectWithTag ("Ghost").GetComponent<FileInputOutput> ();
+		//FIO.PlayerJustReset = true;
+
         time = 0.0f;
         timeMinute = 0;
         timeSecond = 0;

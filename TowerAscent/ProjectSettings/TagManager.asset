@@ -15,6 +15,7 @@ TagManager:
   - Prev
   - Play
   - Helper
+  - HelperCamera
   layers:
   - Default
   - TransparentFX

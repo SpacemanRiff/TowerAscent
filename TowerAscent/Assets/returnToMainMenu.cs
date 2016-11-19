@@ -17,7 +17,7 @@ public class returnToMainMenu : MonoBehaviour {
     {
         if (other.tag == "VRController")
         {
-            Debug.Log("Changing Scene To Main Menu!");
+            //Debug.Log("Changing Scene To Main Menu!");
             //SceneManager.UnloadScene(CurrentScene);
             SceneManager.LoadSceneAsync("MainMenu");
             SceneManager.UnloadScene(CurrentScene);
