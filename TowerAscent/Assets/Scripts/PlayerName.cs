@@ -2,9 +2,11 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Steamworks;
 
 public class PlayerName : MonoBehaviour {
 
+    [Header("UI Components")]
 
     public Text NameText;
 
@@ -12,11 +14,17 @@ public class PlayerName : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        if (!SteamManager.Initialized) {
+            return;
+        }
+
+        NameText.text = SteamFriends.GetPersonaName();
 	}
-    void Awake()
+
+    /*void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
-    }
+    }*/
 
     public string getName() {
         return playerName;
