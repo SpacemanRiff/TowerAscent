@@ -29,7 +29,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000010875378994
 GameObject:
   m_ObjectHideFlags: 1
@@ -151,7 +151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000012977411306
 GameObject:
   m_ObjectHideFlags: 1
@@ -331,10 +331,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011001016896}
-  m_LocalRotation: {x: -0, y: 0.93968165, z: -0, w: -0.34205025}
-  m_LocalPosition: {x: -1.251709, y: 2.55, z: -16.457733}
+  m_LocalRotation: {x: -0, y: 0.7736411, z: -0, w: -0.63362414}
+  m_LocalPosition: {x: 2.2, y: 6.31, z: -3.55}
   m_LocalScale: {x: 0.60290504, y: 0.37592152, z: 1.2530717}
-  m_LocalEulerAnglesHint: {x: 0, y: 299.871, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 258.912, z: 0}
   m_Children:
   - {fileID: 4000011039890610}
   - {fileID: 4000011255304560}
@@ -604,8 +604,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 416a9da5e45018244a755ee4740d4516, type: 3}
-    m_FontSize: 240
+    m_Font: {fileID: 12800000, guid: c921cb5b70fa14148896cf3bb8724376, type: 3}
+    m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -616,7 +616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Make Sure You Enter \nYour Name Using The Keyboard:\n"
+  m_Text: "Make sure you enter \nyour name using the keyboard:\n"
 --- !u!114 &114000010215204300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -688,8 +688,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 416a9da5e45018244a755ee4740d4516, type: 3}
-    m_FontSize: 240
+    m_Font: {fileID: 12800000, guid: c921cb5b70fa14148896cf3bb8724376, type: 3}
+    m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1055,7 +1055,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -2368, y: 2492}
+  m_AnchoredPosition: {x: -2413, y: 2492}
   m_SizeDelta: {x: 5000, y: 5000}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224000012996781492
