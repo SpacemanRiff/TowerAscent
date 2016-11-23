@@ -48,14 +48,14 @@ namespace VRTK
         private Transform headCamera;
         private Transform controllerTransform;
         private Vector3 startControllerPosition;
-        private Vector3 startPosition;
+        public Vector3 startPosition;
         private Vector3 lastGoodHeadsetPosition;
         private bool headsetColliding = false;
-        private bool isClimbing = false;
+        public bool isClimbing = false;
         private VRTK_PlayerPresence playerPresence;
         private VRTK_HeadsetCollision headsetCollision;
         private VRTK_HeadsetFade headsetFade;
-        private GameObject climbingObject;
+        public GameObject climbingObject;
 
         private void OnPlayerClimbStarted(PlayerClimbEventArgs e)
         {
@@ -290,7 +290,7 @@ namespace VRTK
             return interactObject != null && interactObject.AttachIsClimbObject();
         }
 
-        private void Update()
+        public void Update()
         {
             if (isClimbing)
             {
