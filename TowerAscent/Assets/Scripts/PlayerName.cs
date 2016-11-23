@@ -39,7 +39,7 @@ public class PlayerName : MonoBehaviour {
 
     void OnGUI()
     {
-        playerName = GUI.TextField(new Rect(25, 25, 100, 30), playerName,25);
+        //playerName = GUI.TextField(new Rect(25, 25, 100, 30), playerName,25);
     }
 
 }

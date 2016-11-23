@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine.Networking;
 using System.Collections;
 using System;
+using Steamworks;
 
 public class lbSend : MonoBehaviour {
     public PlayerName ObjPlayerName;
@@ -22,6 +23,8 @@ public class lbSend : MonoBehaviour {
     }
     //To Do: make another function/class that reads through lb files and detects if name is already present, then update instead of insert 
     public IEnumerator send() {
+        SteamAPICall_t handle = SteamUserStats.FindLeaderboard(levelName);
+
         //StartCoroutine(receiver.receive());
         //levelName = "TOWER_ASCENT_LB_TT";
         Debug.Log("Working on Sending");

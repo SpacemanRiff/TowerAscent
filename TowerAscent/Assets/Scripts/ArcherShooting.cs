@@ -74,9 +74,13 @@ public class ArcherShooting : MonoBehaviour {
 			}
             currentMousePosition = Input.mousePosition;
             placeToGo = helperCamera.ScreenToWorldPoint(new Vector3(currentMousePosition.x, currentMousePosition.y, zOffset));
-            arrowShot.transform.LookAt(placeToGo);
-			arrowShot.GetComponent<Rigidbody>().AddForce(arrowShot.transform.forward * arrowSpeed * currentForce, ForceMode.Impulse);
-			currentScale = 1;
+            //arrowShot.transform.LookAt(placeToGo);
+            arrowShot.transform.position = helperCamera.transform.position
+                + helperCamera.transform.forward * 2
+                + helperCamera.transform.right;
+            //arrowShot.GetComponent<Rigidbody>().AddForce(arrowShot.transform.forward * arrowSpeed * currentForce, ForceMode.Impulse);
+            arrowShot.GetComponent<Rigidbody>().velocity = arrowShot.transform.forward * arrowSpeed * currentForce/4;
+            currentScale = 1;
 			currentForce = 1;
 		}
 	}

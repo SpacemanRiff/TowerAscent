@@ -5,6 +5,8 @@ public class ArrowScript : MonoBehaviour {
 	
 	private string controllerTag = "VRController";
 	private string towerTag = "Tower";
+    private string bowTag = "Bow";
+    private string arrowName = "Arrow(Clone)";
 	private Rigidbody rb;
 
 	// Use this for initialization
@@ -17,15 +19,14 @@ public class ArrowScript : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter (Collider other) {
-		if (other.CompareTag(controllerTag)) {
-			//if player is grabbing me then do this
-			StartDegrading();
-		}
-		if (other.CompareTag(towerTag)) {
-			//Stop Arrow Movement Entirely
-			rb.velocity = Vector3.zero;
-		}
+
+    void OnCollisionEnter(Collision collision) {
+        
+        if (!collision.gameObject.name.Equals(arrowName)) {
+            rb.useGravity = false;
+            rb.isKinematic = true;
+            rb.velocity = Vector3.zero;
+        }
 	}
 
 
