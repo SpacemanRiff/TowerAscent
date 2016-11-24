@@ -16,6 +16,7 @@ TagManager:
   - Play
   - Helper
   - HelperCamera
+  - VRHead
   layers:
   - Default
   - TransparentFX
