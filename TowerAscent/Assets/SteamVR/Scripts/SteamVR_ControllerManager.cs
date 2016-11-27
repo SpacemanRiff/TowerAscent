@@ -70,7 +70,7 @@ public class SteamVR_ControllerManager : MonoBehaviour
 	// Hide controllers when the dashboard is up.
 	private void OnInputFocus(params object[] args)
 	{
-		bool hasFocus = (bool)args[0];
+		/*bool hasFocus = (bool)args[0];                         //UNCOMMENT ALL THIS IF GAME IS BREAKING -Todd
 		if (hasFocus)
 		{
 			for (int i = 0; i < objects.Length; i++)
@@ -94,7 +94,7 @@ public class SteamVR_ControllerManager : MonoBehaviour
 					HideObject(obj.transform, "hidden (" + label + ")");
 				}
 			}
-		}
+		}*/
 	}
 
 	// Reparents to a new object and deactivates that object (this allows
