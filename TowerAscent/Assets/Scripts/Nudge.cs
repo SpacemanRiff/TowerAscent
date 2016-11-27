@@ -20,7 +20,7 @@ public class Nudge : MonoBehaviour {
 	private void nudgeForward(object sender, ControllerInteractionEventArgs e)
 	{
 		if (Timer.stopped == true && rig.transform.position.z > -10 && rig.transform.position.z < 10) {
-            rig.transform.position += transform.forward; //new Vector3 (0, 0, 0.1f);
+            rig.transform.position += new Vector3 (0, 0, 0.1f);
 		}
 	}
 	private void empty(object sender, ControllerInteractionEventArgs e)
