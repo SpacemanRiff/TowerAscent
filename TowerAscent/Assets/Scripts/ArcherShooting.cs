@@ -80,6 +80,7 @@ public class ArcherShooting : MonoBehaviour {
                 + helperCamera.transform.right;
             //arrowShot.GetComponent<Rigidbody>().AddForce(arrowShot.transform.forward * arrowSpeed * currentForce, ForceMode.Impulse);
             arrowShot.GetComponent<Rigidbody>().velocity = arrowShot.transform.forward * arrowSpeed * currentForce;
+			arrowShot.GetComponent<ArrowScript>().shoot();
             currentScale = 1;
 			currentForce = 1;
 		}

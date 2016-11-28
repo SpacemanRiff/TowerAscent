@@ -8,6 +8,7 @@ public class ArrowScript : MonoBehaviour {
     private string bowTag = "Bow";
     private string arrowName = "Arrow(Clone)";
     private string headName = "Camera (eye)";
+	private bool hasBeenShot = false;
 	private Rigidbody rb;
 
 	// Use this for initialization
@@ -16,8 +17,10 @@ public class ArrowScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void FixedUpdate () {
+		if(hasBeenShot) {
+			transform.forward = Vector3.Slerp(transform.forward, rb.velocity.normalized, Time.deltaTime * 5);
+		}
 	}
 
 
@@ -41,11 +44,7 @@ public class ArrowScript : MonoBehaviour {
         rb.isKinematic = false;
     }
 
-
-
-    private void StartDegrading() {
-		//Slowly start rotating down for X ammount of time
-		//Once time has been reached the arrow should snap and fall to ground
-		//If player is holding the arrow then it should stay in players hand until he lets go
+	public void shoot() {
+		hasBeenShot = true;
 	}
 }
