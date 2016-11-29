@@ -44,6 +44,7 @@ class SteamManager : MonoBehaviour
 
     private void Awake()
     {
+       
         // Only one instance of SteamManager at a time!
         if (s_instance != null)
         {
@@ -182,6 +183,29 @@ class SteamManager : MonoBehaviour
         else
         {
             print("Not Successful");
+        }
+    }
+
+    public static void ArrowGrab() {
+        SteamUserStats.ClearAchievement("arrowGrab");
+        SteamUserStats.StoreStats();
+        bool arrowGrabAchieved;
+        bool arrowGrabSuccessful = SteamUserStats.GetAchievement("arrowGrab", out arrowGrabAchieved);
+        if (arrowGrabSuccessful)
+        {
+            if (!arrowGrabAchieved)
+            {
+                SteamUserStats.SetAchievement("arrowGrab");
+                SteamUserStats.StoreStats();
+                print("Arrow Grabbed");
+            }
+            else
+            {
+                print("Arrow Grab Achieved");
+            }
+        }
+        else {
+            print("Arrow Grab not successful");
         }
     }
 

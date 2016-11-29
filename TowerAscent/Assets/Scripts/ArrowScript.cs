@@ -9,6 +9,11 @@ public class ArrowScript : MonoBehaviour {
     private string arrowName = "Arrow(Clone)";
     private string headName = "Camera (eye)";
 	private bool hasBeenShot = false;
+    private bool hasHit = false;
+    public HandMovementLeft leftHand;
+    public HandMovementRight rightHand;
+    public VRTK.VRTK_InteractGrab lefty;
+    public VRTK.VRTK_InteractGrab righty;
 	private Rigidbody rb;
 
 	// Use this for initialization
@@ -26,6 +31,20 @@ public class ArrowScript : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision) {
         print(collision.gameObject.name);
+        if (collision.gameObject.tag.Equals(controllerTag) && !hasHit) {
+            if (leftHand.gripButtonPressed && lefty.GetGrabbedObject().Equals(this))
+            {
+                SteamManager.ArrowGrab();
+
+            }
+            else if (rightHand.gripButtonPressed && righty.GetGrabbedObject().Equals(this))
+            {
+                SteamManager.ArrowGrab();
+            }
+            print("Grabbed Object: "+ righty.GetGrabbedObject());
+            print("Grabbed Object: " + lefty.GetGrabbedObject());
+               
+        }
         if (collision.gameObject.name.Equals(headName)) {
             print("Hit head");
             SteamManager.HeadshotAchievement();
@@ -34,6 +53,7 @@ public class ArrowScript : MonoBehaviour {
             rb.useGravity = false;
             rb.isKinematic = true;
             rb.velocity = Vector3.zero;
+            hasHit = true;
         }
 	}
 

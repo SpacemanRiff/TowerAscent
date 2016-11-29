@@ -17,6 +17,7 @@ TagManager:
   - Helper
   - HelperCamera
   - VRHead
+  - Ghost
   layers:
   - Default
   - TransparentFX

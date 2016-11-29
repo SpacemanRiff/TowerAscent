@@ -137,6 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fce5f9335271443cabd4bf5d3e0e96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
+  lefty: {fileID: 114000010667263306, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
+  righty: {fileID: 114000011246269342, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
 --- !u!114 &114000013084744256
 MonoBehaviour:
   m_ObjectHideFlags: 1
