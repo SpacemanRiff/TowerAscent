@@ -12,15 +12,18 @@ public class ArcherShooting : MonoBehaviour {
 	public float scaleMinimum = 0.7f;
 	public float arrowSpeed = 10.0f;
 	public int maxNumberOfArrows = 4, maxNumberOfTracers = 4;
+	public int quiverSize = 3;
+	private int numberArrowsShot = 0;
     public GameObject arrow, arrowTwo, arrowThree, bow;
     private GameObject arrowShot, bowHold;
     private Camera helperCamera;
 
+	private bool arrowInBow = false;
 	private float currentScale;
 	private float currentForce;
 	private float zOffset = 20.0f;
 	private Queue arrowsInGame = new Queue();
-    Vector3 placeToGo, currentMousePosition;
+    Vector3 placeToLook, currentMousePosition;
 
     // Use this for initialization
     void Start () {
@@ -37,52 +40,42 @@ public class ArcherShooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		placeToLook = helperCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffset));
+
         bowHold.transform.position = helperCamera.transform.position
             + helperCamera.transform.forward * 2
             + helperCamera.transform.right;
-        bowHold.transform.LookAt(placeToGo);
+		
+        bowHold.transform.LookAt(placeToLook);
 
-        if (Input.GetMouseButtonDown(0)) {
-            arrowShot = (GameObject)Instantiate(
-                arrow,
-                helperCamera.transform.position 
-                + helperCamera.transform.forward * 2 
-                + helperCamera.transform.right,
-                transform.rotation);
+		if(arrowInBow) {
+
+			arrowShot.transform.LookAt(placeToLook);
+
+		} else if(numberArrowsShot < quiverSize) {
+			arrowShot = (GameObject)Instantiate(
+				arrow,
+				helperCamera.transform.position 
+				+ helperCamera.transform.forward * 2 
+				+ helperCamera.transform.right,
+				transform.rotation);
 			arrowsInGame.Enqueue(arrowShot);
-            currentMousePosition = Input.mousePosition;
-            placeToGo = helperCamera.ScreenToWorldPoint(new Vector3(currentMousePosition.x, currentMousePosition.y, zOffset));
-            arrowShot.transform.LookAt(placeToGo);
-        }
+			arrowInBow = true;
+			numberArrowsShot++;
+		}
+
 		if(Input.GetMouseButton(0)) {
 			if(currentScale > scaleMinimum) {
 				currentScale = currentScale - scalingSpeed;
 				currentForce = currentForce + (1 - currentScale) * maxForce;
 			}
-            arrowShot.transform.position = helperCamera.transform.position 
-                + helperCamera.transform.forward * 2
-                + helperCamera.transform.right;
-            
-            currentMousePosition = Input.mousePosition;
-            placeToGo = helperCamera.ScreenToWorldPoint(new Vector3(currentMousePosition.x, currentMousePosition.y, zOffset));
-            arrowShot.transform.LookAt(placeToGo);
         }
 		if(Input.GetMouseButtonUp(0)) {
-			if(arrowsInGame.Count > maxNumberOfArrows) {
-				GameObject arrowToDestroy = (GameObject)arrowsInGame.Dequeue();
-				GameObject.Destroy(arrowToDestroy);
-			}
-            currentMousePosition = Input.mousePosition;
-            placeToGo = helperCamera.ScreenToWorldPoint(new Vector3(currentMousePosition.x, currentMousePosition.y, zOffset));
-            //arrowShot.transform.LookAt(placeToGo);
-            arrowShot.transform.position = helperCamera.transform.position
-                + helperCamera.transform.forward * 2
-                + helperCamera.transform.right;
-            //arrowShot.GetComponent<Rigidbody>().AddForce(arrowShot.transform.forward * arrowSpeed * currentForce, ForceMode.Impulse);
             arrowShot.GetComponent<Rigidbody>().velocity = arrowShot.transform.forward * arrowSpeed * currentForce;
 			arrowShot.GetComponent<ArrowScript>().shoot();
             currentScale = 1;
 			currentForce = 1;
+			arrowInBow = false;
 		}
 	}
 
