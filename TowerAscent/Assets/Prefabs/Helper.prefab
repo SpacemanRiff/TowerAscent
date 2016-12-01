@@ -235,9 +235,8 @@ MonoBehaviour:
   maxForce: 1.2
   scaleMinimum: 0.25
   arrowSpeed: 7.5
-  maxNumberOfArrows: 3
-  maxNumberOfTracers: 20
-  quiverSize: 3
+  quiverSize: 300
+  timeBetweenArrows: 1
   arrow: {fileID: 111768, guid: 802986766a97b4a108b97eb5fdf6e02f, type: 2}
   arrowTwo: {fileID: 137478, guid: 84ad69e92e6fe401c8848494bcedac7d, type: 2}
   arrowThree: {fileID: 111768, guid: 802986766a97b4a108b97eb5fdf6e02f, type: 2}
