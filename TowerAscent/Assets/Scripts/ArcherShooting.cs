@@ -18,6 +18,7 @@ public class ArcherShooting : MonoBehaviour {
     public GameObject arrow, arrowTwo, arrowThree, bow;
 	private GameObject arrowCurrent, bowHold;
     private Camera helperCamera;
+	private Animator bowAnimator;
 
 	private bool arrowInBow = false;
 	private float currentScale;
@@ -45,6 +46,7 @@ public class ArcherShooting : MonoBehaviour {
 			+ helperCamera.transform.forward * 2
 			+ helperCamera.transform.right;
 		bowHold.transform.SetParent(helperCamera.transform);
+		bowAnimator = bowHold.GetComponent<Animator>();
 		stringOnBow = GameObject.FindGameObjectWithTag("String").GetComponent<Transform>();
     }
 	
@@ -84,6 +86,7 @@ public class ArcherShooting : MonoBehaviour {
 			currentScale = currentScale - scalingSpeed;
 			currentForce = currentForce + (1 - currentScale) * maxForce;
 		}
+		bowAnimator.SetTrigger("Shoot");
 	}
 
 	private bool IsQuiverEmpty() {
@@ -108,6 +111,7 @@ public class ArcherShooting : MonoBehaviour {
 		arrowCurrent.transform.SetParent(null);
 		arrowCurrent.GetComponent<Rigidbody>().velocity = arrowCurrent.transform.forward * arrowSpeed * currentForce;
 		arrowCurrent.GetComponent<ArrowScript>().shoot();
+
 		currentScale = 1;
 		currentForce = 1;
 		arrowInBow = false;
