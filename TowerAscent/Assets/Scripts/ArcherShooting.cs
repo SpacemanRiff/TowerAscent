@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class ArcherShooting : MonoBehaviour {
 
 	public Texture2D crosshairImage;
+	//public Texture2D arrowImage;
 	public const float crosshairMaxSize = 50.0f;
 	public const float crosshairMinSize = 0.1f;
 	public float scalingSpeed = 0.01f;
@@ -123,8 +124,11 @@ public class ArcherShooting : MonoBehaviour {
 	}
 
 	void OnGUI() {
+		//string arrowsLeftText = "x " + numberArrowsShot;
 		float xMin = (Input.mousePosition.x) - ((crosshairMaxSize * currentScale) / 2);
 		float yMin = (Screen.height - Input.mousePosition.y) - ((crosshairMaxSize * currentScale) / 2);
 		GUI.DrawTexture(new Rect(xMin, yMin, crosshairMaxSize * currentScale, crosshairMaxSize * currentScale), crosshairImage);
+		//GUI.DrawTexture(new Rect(Screen.width - width, Screen.height - height, width, height, arrowImage);
+		//GUI.TextField(new Rect(), arrowsLeftText);
 	}
 }
