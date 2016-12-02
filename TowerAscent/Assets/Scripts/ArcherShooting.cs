@@ -106,7 +106,6 @@ public class ArcherShooting : MonoBehaviour {
 			bowHold.transform.rotation,
 			stringOnBow);
 		arrowCurrent.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-		arrowCurrent.GetComponent<Rigidbody>().useGravity = false;
 		arrowsInGame.Enqueue(arrowCurrent);
 		arrowInBow = true;
 	}
