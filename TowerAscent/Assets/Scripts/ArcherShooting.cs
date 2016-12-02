@@ -86,7 +86,7 @@ public class ArcherShooting : MonoBehaviour {
 			currentScale = currentScale - scalingSpeed;
 			currentForce = currentForce + (1 - currentScale) * maxForce;
 		}
-		bowAnimator.SetTrigger("Shoot");
+		//bowAnimator.SetTrigger("Shoot");
 	}
 
 	private bool IsQuiverEmpty() {

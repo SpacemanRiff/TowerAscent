@@ -4,8 +4,6 @@ using System.Collections;
 public class ArrowScript : MonoBehaviour {
 	
 	private string controllerTag = "VRController";
-	private string towerTag = "Tower";
-    private string bowTag = "Bow";
     private string arrowName = "Arrow(Clone)";
     private string headName = "Camera (eye)";
 	private bool hasBeenShot = false;
