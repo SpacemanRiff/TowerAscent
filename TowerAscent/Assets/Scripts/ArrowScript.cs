@@ -34,12 +34,12 @@ public class ArrowScript : MonoBehaviour {
         if (collision.gameObject.tag.Equals(controllerTag) && !hasHit) {
             if (leftHand.gripButtonPressed && lefty.GetGrabbedObject().Equals(this))
             {
-                SteamManager.ArrowGrab();
+                SteamManager.ArrowGrabAchievement();
 
             }
             else if (rightHand.gripButtonPressed && righty.GetGrabbedObject().Equals(this))
             {
-                SteamManager.ArrowGrab();
+                SteamManager.ArrowGrabAchievement();
             }
             print("Grabbed Object: "+ righty.GetGrabbedObject());
             print("Grabbed Object: " + lefty.GetGrabbedObject());

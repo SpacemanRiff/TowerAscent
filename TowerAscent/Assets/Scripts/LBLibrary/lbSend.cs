@@ -14,17 +14,19 @@ public class lbSend : MonoBehaviour {
     public Timer timer;
     public bool timeIsLower = false;
     public lbReceive receiver;
+    private SteamLeaderboard_t steamLeaderboard;
+    private CallResult<LeaderboardFindResult_t> LeaderboardFindResult;
     void Start() {
         //StartCoroutine(send());
-       
+        //steamUpload();
     }
     void Update() {
+        //steamUpload();
         playerName = ObjPlayerName.getName();
     }
     //To Do: make another function/class that reads through lb files and detects if name is already present, then update instead of insert 
     public IEnumerator send() {
-        SteamAPICall_t handle = SteamUserStats.FindLeaderboard(levelName);
-
+        //steamUpload();
         //StartCoroutine(receiver.receive());
         //levelName = "TOWER_ASCENT_LB_TT";
         Debug.Log("Working on Sending");
@@ -91,8 +93,23 @@ public class lbSend : MonoBehaviour {
         }   
     }
 
-    public void reset()
-    {
+    /*public void steamUpload() {
+        Debug.Log("Before the Bloop");
+        steamLeaderboard = pCa
+        SteamAPICall_t handle = SteamUserStats.FindLeaderboard("TOWER_ASCENT_LB_01");
+        LeaderboardFindResult.Set(handle);
+        SteamUserStats.UploadLeaderboardScore(
+            steamLeaderboard, 
+            ELeaderboardUploadScoreMethod.k_ELeaderboardUploadScoreMethodKeepBest,
+            50,
+            null,
+            0
+            );
+        Debug.Log("Blooped");
+    }*/
+
+    public void reset() {
+        //steamUpload();
         playerTime = timer.timeyTime;
         StartCoroutine(send());
         //playerTime = timer.timeyTime;
