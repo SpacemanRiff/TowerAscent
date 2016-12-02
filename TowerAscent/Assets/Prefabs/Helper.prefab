@@ -231,9 +231,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshairImage: {fileID: 2800000, guid: f4299abd941c94493a5eab0fe8549e6c, type: 3}
-  scalingSpeed: 0.01
-  maxForce: 0.3
-  scaleMinimum: 0.25
   arrowSpeed: 7.5
   quiverSize: 9
   timeBetweenArrows: 1
@@ -241,6 +238,9 @@ MonoBehaviour:
   arrowTwo: {fileID: 137478, guid: 84ad69e92e6fe401c8848494bcedac7d, type: 2}
   arrowThree: {fileID: 111768, guid: 802986766a97b4a108b97eb5fdf6e02f, type: 2}
   bow: {fileID: 1000013858243664, guid: 11dfce2b2ba5f461087fe81148357e14, type: 2}
+  reticleMaxSize: 50
+  reticleMinSize: 0.1
+  drawBowTime: 2000
 --- !u!124 &124000011008669790
 Behaviour:
   m_ObjectHideFlags: 1
