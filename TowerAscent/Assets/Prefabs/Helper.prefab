@@ -235,12 +235,13 @@ MonoBehaviour:
   maxForce: 1.2
   scaleMinimum: 0.25
   arrowSpeed: 7.5
-  quiverSize: 5
+  quiverSize: 9
   timeBetweenArrows: 1
   arrow: {fileID: 111768, guid: 802986766a97b4a108b97eb5fdf6e02f, type: 2}
   arrowTwo: {fileID: 137478, guid: 84ad69e92e6fe401c8848494bcedac7d, type: 2}
   arrowThree: {fileID: 111768, guid: 802986766a97b4a108b97eb5fdf6e02f, type: 2}
   bow: {fileID: 1000013858243664, guid: 11dfce2b2ba5f461087fe81148357e14, type: 2}
+  forwardThing: 0.29
 --- !u!124 &124000011008669790
 Behaviour:
   m_ObjectHideFlags: 1

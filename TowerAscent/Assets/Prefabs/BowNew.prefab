@@ -217,7 +217,7 @@ GameObject:
   - 4: {fileID: 4000011452971142}
   m_Layer: 0
   m_Name: string
-  m_TagString: Untagged
+  m_TagString: String
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,10 +305,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010981384080}
-  - 95: {fileID: 95000012593388824}
+  - 111: {fileID: 111000012271349920}
   m_Layer: 0
   m_Name: BowNew
-  m_TagString: String
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,7 +393,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013858243664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.5061035, y: 0, z: -9.492462}
+  m_LocalPosition: {x: 29.463928, y: 2.68, z: -23.080872}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -621,23 +621,21 @@ Transform:
   - {fileID: 4000011104649480}
   m_Father: {fileID: 4000011267471634}
   m_RootOrder: 0
---- !u!95 &95000012593388824
-Animator:
-  serializedVersion: 3
+--- !u!111 &111000012271349920
+Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013858243664}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 0ab999f669e4b8344b53d1092a619399, type: 3}
-  m_Controller: {fileID: 9100000, guid: b5061c0a7a1d233469e9e631ffdd920f, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400002, guid: 0ab999f669e4b8344b53d1092a619399, type: 3}
+  m_Animations:
+  - {fileID: 7400002, guid: 0ab999f669e4b8344b53d1092a619399, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!137 &137000010098812448
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

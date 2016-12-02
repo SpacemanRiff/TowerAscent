@@ -49,8 +49,9 @@ ModelImporter:
     400040: top_ik
     4300000: Bow
     7400000: Default Take
-    7400002: ArmatureAction_001
+    7400002: DrawBow
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Bow
   materials:
     importMaterials: 1
@@ -144,7 +145,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: ArmatureAction_001
+      name: DrawBow
       takeName: ArmatureAction_001
       firstFrame: -1
       lastFrame: 46
@@ -250,7 +251,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

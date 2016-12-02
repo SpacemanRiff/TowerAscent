@@ -18,7 +18,7 @@ public class ArcherShooting : MonoBehaviour {
     public GameObject arrow, arrowTwo, arrowThree, bow;
 	private GameObject arrowCurrent, bowHold;
     private Camera helperCamera;
-	private Animator bowAnimator;
+	private Animation bowAnimation;
 
 	private bool arrowInBow = false;
 	private float currentScale;
@@ -28,7 +28,7 @@ public class ArcherShooting : MonoBehaviour {
 	private Transform stringOnBow;
     Vector3 mousePositionWorldSpace, currentMousePosition;
 
-	private 
+	//public float forwardThing = 0.05f;
 
     // Use this for initialization
     void Start () {
@@ -46,7 +46,7 @@ public class ArcherShooting : MonoBehaviour {
 			+ helperCamera.transform.forward * 2
 			+ helperCamera.transform.right;
 		bowHold.transform.SetParent(helperCamera.transform);
-		bowAnimator = bowHold.GetComponent<Animator>();
+		bowAnimation = bowHold.GetComponent<Animation>();
 		stringOnBow = GameObject.FindGameObjectWithTag("String").GetComponent<Transform>();
     }
 	
@@ -82,11 +82,17 @@ public class ArcherShooting : MonoBehaviour {
 	}
 
 	private void DrawBow() {
+
 		if(currentScale > scaleMinimum) {
 			currentScale = currentScale - scalingSpeed;
 			currentForce = currentForce + (1 - currentScale) * maxForce;
+			if(!bowAnimation.isPlaying) {
+				bowAnimation["DrawBow"].speed = 1.2f;
+				bowAnimation.Play();
+			}
+		} else {
+			bowAnimation.Stop();
 		}
-		//bowAnimator.SetTrigger("Shoot");
 	}
 
 	private bool IsQuiverEmpty() {
@@ -96,11 +102,9 @@ public class ArcherShooting : MonoBehaviour {
 	private void NockArrow() {
 		arrowCurrent = (GameObject)Instantiate(
 			arrow,
-			helperCamera.transform.position
-			+ helperCamera.transform.forward * 2
-			+ helperCamera.transform.right,
-			bowHold.transform.rotation);
-		arrowCurrent.transform.SetParent(stringOnBow);
+			bowHold.transform.position + bowHold.transform.forward * 0.29f + bowHold.transform.right * 0.01f,
+			bowHold.transform.rotation,
+			stringOnBow);
 		arrowCurrent.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
 		arrowCurrent.GetComponent<Rigidbody>().useGravity = false;
 		arrowsInGame.Enqueue(arrowCurrent);
@@ -110,6 +114,8 @@ public class ArcherShooting : MonoBehaviour {
 	private void ShootArrow() {
 		arrowCurrent.GetComponent<ArrowScript>().shoot();
 		arrowCurrent.GetComponent<Rigidbody>().velocity = arrowCurrent.transform.forward * arrowSpeed * currentForce;
+		bowAnimation.Play();
+		bowAnimation["DrawBow"].speed = -2.0f;
 
 		currentScale = 1;
 		currentForce = 1;
