@@ -101,16 +101,15 @@ public class ArcherShooting : MonoBehaviour {
 			+ helperCamera.transform.right,
 			bowHold.transform.rotation);
 		arrowCurrent.transform.SetParent(stringOnBow);
+		arrowCurrent.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
 		arrowCurrent.GetComponent<Rigidbody>().useGravity = false;
 		arrowsInGame.Enqueue(arrowCurrent);
 		arrowInBow = true;
 	}
 
 	private void ShootArrow() {
-		arrowCurrent.GetComponent<Rigidbody>().useGravity = true;
-		arrowCurrent.transform.SetParent(null);
-		arrowCurrent.GetComponent<Rigidbody>().velocity = arrowCurrent.transform.forward * arrowSpeed * currentForce;
 		arrowCurrent.GetComponent<ArrowScript>().shoot();
+		arrowCurrent.GetComponent<Rigidbody>().velocity = arrowCurrent.transform.forward * arrowSpeed * currentForce;
 
 		currentScale = 1;
 		currentForce = 1;

@@ -217,7 +217,7 @@ GameObject:
   - 4: {fileID: 4000011452971142}
   m_Layer: 0
   m_Name: string
-  m_TagString: String
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,7 +308,7 @@ GameObject:
   - 95: {fileID: 95000012593388824}
   m_Layer: 0
   m_Name: BowNew
-  m_TagString: Untagged
+  m_TagString: String
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,7 +393,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013858243664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.86797, y: 0.27483612, z: -6.9961314}
+  m_LocalPosition: {x: 14.5061035, y: 0, z: -9.492462}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:

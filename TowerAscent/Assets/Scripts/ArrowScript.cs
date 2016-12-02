@@ -21,6 +21,7 @@ public class ArrowScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		
 		if(hasBeenShot) {
 			transform.forward = Vector3.Slerp(transform.forward, rb.velocity.normalized, Time.deltaTime * 5);
 		}
@@ -52,6 +53,9 @@ public class ArrowScript : MonoBehaviour {
     }
 
 	public void shoot() {
+		rb.useGravity = true;
+		transform.SetParent(null);
+		rb.constraints = RigidbodyConstraints.None;
 		hasBeenShot = true;
 	}
 }
