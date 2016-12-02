@@ -28,23 +28,14 @@ public class ArrowScript : MonoBehaviour {
 
 
     void OnCollisionEnter(Collision collision) {
-        print(collision.gameObject.name);
         if (collision.gameObject.tag.Equals(controllerTag) && !hasHit) {
-            if (leftHand.gripButtonPressed && lefty.GetGrabbedObject().Equals(this))
-            {
+			if (leftHand.gripButtonPressed && lefty.GetGrabbedObject().Equals(this) && rightHand.gripButtonPressed && righty.GetGrabbedObject().Equals(this)) {
                 SteamManager.ArrowGrab();
 
             }
-            else if (rightHand.gripButtonPressed && righty.GetGrabbedObject().Equals(this))
-            {
-                SteamManager.ArrowGrab();
-            }
-            print("Grabbed Object: "+ righty.GetGrabbedObject());
-            print("Grabbed Object: " + lefty.GetGrabbedObject());
                
         }
         if (collision.gameObject.name.Equals(headName)) {
-            print("Hit head");
             SteamManager.HeadshotAchievement();
         }
         if (!collision.gameObject.name.Equals(arrowName)) {
@@ -55,9 +46,7 @@ public class ArrowScript : MonoBehaviour {
         }
 	}
 
-    void OnCollisionExit(Collision collision)
-    {
-        print("Left Collider");
+    void OnCollisionExit(Collision collision) {
         rb.useGravity = true;
         rb.isKinematic = false;
     }
