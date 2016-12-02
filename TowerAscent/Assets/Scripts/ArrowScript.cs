@@ -4,8 +4,6 @@ using System.Collections;
 public class ArrowScript : MonoBehaviour {
 	
 	private string controllerTag = "VRController";
-	private string towerTag = "Tower";
-    private string bowTag = "Bow";
     private string arrowName = "Arrow(Clone)";
     private string headName = "Camera (eye)";
 	private bool hasBeenShot = false;
@@ -23,6 +21,7 @@ public class ArrowScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		
 		if(hasBeenShot) {
 			transform.forward = Vector3.Slerp(transform.forward, rb.velocity.normalized, Time.deltaTime * 5);
 		}
@@ -30,23 +29,15 @@ public class ArrowScript : MonoBehaviour {
 
 
     void OnCollisionEnter(Collision collision) {
-        print(collision.gameObject.name);
         if (collision.gameObject.tag.Equals(controllerTag) && !hasHit) {
-            if (leftHand.gripButtonPressed && lefty.GetGrabbedObject().Equals(this))
-            {
+
+			if (leftHand.gripButtonPressed && lefty.GetGrabbedObject().Equals(this) && rightHand.gripButtonPressed && righty.GetGrabbedObject().Equals(this)) {
                 SteamManager.ArrowGrabAchievement();
 
             }
-            else if (rightHand.gripButtonPressed && righty.GetGrabbedObject().Equals(this))
-            {
-                SteamManager.ArrowGrabAchievement();
-            }
-            print("Grabbed Object: "+ righty.GetGrabbedObject());
-            print("Grabbed Object: " + lefty.GetGrabbedObject());
-               
+                   
         }
         if (collision.gameObject.name.Equals(headName)) {
-            print("Hit head");
             SteamManager.HeadshotAchievement();
         }
         if (!collision.gameObject.name.Equals(arrowName)) {
@@ -57,14 +48,15 @@ public class ArrowScript : MonoBehaviour {
         }
 	}
 
-    void OnCollisionExit(Collision collision)
-    {
-        print("Left Collider");
+    void OnCollisionExit(Collision collision) {
         rb.useGravity = true;
         rb.isKinematic = false;
     }
 
 	public void shoot() {
+		rb.useGravity = true;
+		transform.SetParent(null);
+		rb.constraints = RigidbodyConstraints.None;
 		hasBeenShot = true;
 	}
 }
