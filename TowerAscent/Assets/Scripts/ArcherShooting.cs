@@ -57,6 +57,7 @@ public class ArcherShooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		print (currentPercentageDrawn);
 		mousePositionWorldSpace = helperCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffset));
         bowHold.transform.LookAt(mousePositionWorldSpace);
 		if(timeLeft >= 0) {
@@ -90,8 +91,8 @@ public class ArcherShooting : MonoBehaviour {
 
 		if(currentPercentageDrawn > 0) {
 			currentDrawTime -= Time.deltaTime;
-			currentPercentageDrawn = 1 - (currentDrawTime / drawBowTime);
-			currentReticleSize = reticleMaxSize - (reticleDelta * currentPercentageDrawn);
+			currentPercentageDrawn = (currentDrawTime / drawBowTime);
+			currentReticleSize = reticleMaxSize - (reticleDelta * (1-currentPercentageDrawn));
 			if(!bowAnimation.isPlaying) {
 				bowAnimation["DrawBow"].speed = 1.2f;
 				bowAnimation.Play();
@@ -131,9 +132,9 @@ public class ArcherShooting : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		float reticleXLocation = Input.mousePosition.x - (reticleMaxSize * currentPercentageDrawn)/2;
-		float reticleYLocation = (Screen.height - Input.mousePosition.y) - ((reticleMaxSize * currentPercentageDrawn) / 2);
-		GUI.DrawTexture (new Rect (reticleXLocation, reticleYLocation, reticleMaxSize * currentPercentageDrawn, reticleMaxSize * currentPercentageDrawn), crosshairImage);
+		float reticleXLocation = Input.mousePosition.x - currentReticleSize/2;
+		float reticleYLocation = (Screen.height - Input.mousePosition.y) - ((currentReticleSize) / 2);
+		GUI.DrawTexture (new Rect (reticleXLocation, reticleYLocation, currentReticleSize, currentReticleSize), crosshairImage);
 
 	}
 
