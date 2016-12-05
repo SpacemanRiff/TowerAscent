@@ -15,6 +15,7 @@ public class ArcherShooting : MonoBehaviour {
 	private GameObject arrowCurrent, bowHold;
     private Camera helperCamera;
 	private Animation bowAnimation;
+	public int arrowFontSize;
 
 	public AudioClip bowDraw;
 	public AudioClip bowShoot;
@@ -65,7 +66,7 @@ public class ArcherShooting : MonoBehaviour {
 
 		// Position the Text below the Texture (rather than to the right of it)
 		style.imagePosition = ImagePosition.ImageLeft;
-		style.fontSize = 80;
+		style.fontSize = arrowFontSize;
 		style.normal.textColor = Color.white;
 
 
@@ -158,7 +159,7 @@ public class ArcherShooting : MonoBehaviour {
 		float reticleYLocation = (Screen.height - Input.mousePosition.y) - ((currentReticleSize) / 2);
 		GUI.DrawTexture (new Rect (reticleXLocation, reticleYLocation, currentReticleSize, currentReticleSize), crosshairImage);
 		content = new GUIContent(" x " + (quiverSize - numberArrowsShot), arrowImage, "Arrows left");
-		GUI.Box(new Rect(0, 0, Screen.width - 100, Screen.height - 100), content, style);
+		GUI.Box(new Rect(0, 0, Screen.width - 250, Screen.height - 100), content, style);
 	}
 
 	private void ResetDrawMath() {

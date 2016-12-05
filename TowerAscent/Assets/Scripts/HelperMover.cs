@@ -21,6 +21,9 @@ public class HelperMover : MonoBehaviour {
 		RotateToFaceCenter();
 		float distanceToMoveForward = GetDistanceFromCenter() - desiredDistanceFromCenter;
 		transform.position += transform.forward * distanceToMoveForward;
+	}
+
+	void FixedUpdate () {
 		MovePlayer();
 	}
 
