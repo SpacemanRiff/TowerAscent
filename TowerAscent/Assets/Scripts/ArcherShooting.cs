@@ -17,6 +17,10 @@ public class ArcherShooting : MonoBehaviour {
 	private Animation bowAnimation;
 	public int arrowFontSize;
 
+	public AudioClip bowDraw;
+	public AudioClip bowShoot;
+	private AudioSource bowAudioSource;
+
 	public float reticleMaxSize = 50.0f;
 	public float reticleMinSize = 0.1f;
 	public float drawBowTime;
@@ -42,6 +46,7 @@ public class ArcherShooting : MonoBehaviour {
 		currentForce = 0;
 		timeLeft = 0.0f;
 		reticleDelta = reticleMaxSize - reticleMinSize;
+		bowAudioSource = GetComponent<AudioSource>();
 		ResetDrawMath ();
 		helperCamera = GameObject.FindGameObjectWithTag("HelperCamera").GetComponent<Camera>();
         bowHold = (GameObject)Instantiate(
@@ -107,6 +112,9 @@ public class ArcherShooting : MonoBehaviour {
 			if(!bowAnimation.isPlaying) {
 				bowAnimation["DrawBow"].speed = 1.2f;
 				bowAnimation.Play();
+				bowAudioSource.Stop();
+				bowAudioSource.clip = bowDraw;
+				bowAudioSource.Play();
 			}
 		} else {
 			bowAnimation.Stop();
@@ -133,6 +141,10 @@ public class ArcherShooting : MonoBehaviour {
 		arrowCurrent.GetComponent<Rigidbody>().velocity = arrowCurrent.transform.forward * arrowSpeed * (1-currentPercentageDrawn);
 		bowAnimation.Play();
 		bowAnimation["DrawBow"].speed = -2.0f;
+
+		bowAudioSource.Stop();
+		bowAudioSource.clip = bowShoot;
+		bowAudioSource.Play();
 
 		ResetDrawMath();
 
