@@ -46,9 +46,12 @@ public class ArrowScript : MonoBehaviour {
             rb.useGravity = false;
             rb.isKinematic = true;
             rb.velocity = Vector3.zero;
-            hasHit = true;
-			arrowAudioSource.Stop ();
-			arrowAudioSource.Play ();
+           // hasHit = true;
+			if (!collision.gameObject.tag.Equals (controllerTag) && !hasHit) {
+				arrowAudioSource.Stop ();
+				arrowAudioSource.Play ();
+			}
+			hasHit = true;
         }
 	}
 
