@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshairImage: {fileID: 2800000, guid: f4299abd941c94493a5eab0fe8549e6c, type: 3}
+  arrowImage: {fileID: 2800000, guid: b6ccc4d9a006b46f1ad0bcc1b880af40, type: 3}
   arrowSpeed: 35
   quiverSize: 9
   timeBetweenArrows: 1
