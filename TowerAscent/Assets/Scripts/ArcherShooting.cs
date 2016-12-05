@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class ArcherShooting : MonoBehaviour {
 
 	public Texture2D crosshairImage;
+	public Texture2D arrowImage;
 	public float arrowSpeed = 10.0f;
 	public int quiverSize = 3;
 	public float timeBetweenArrows = 1000.0f;
@@ -31,7 +32,8 @@ public class ArcherShooting : MonoBehaviour {
 	private Transform stringOnBow;
     Vector3 mousePositionWorldSpace, currentMousePosition;
 
-	//public float forwardThing = 0.05f;
+	private GUIContent content;
+	private GUIStyle style = new GUIStyle();
 
     // Use this for initialization
     void Start () {
@@ -42,22 +44,30 @@ public class ArcherShooting : MonoBehaviour {
 		ResetDrawMath ();
 		helperCamera = GameObject.FindGameObjectWithTag("HelperCamera").GetComponent<Camera>();
         bowHold = (GameObject)Instantiate(
-                bow,
-                helperCamera.transform.position
-                + helperCamera.transform.forward * 2
-                + helperCamera.transform.right,
-                transform.rotation);
+            bow,
+            helperCamera.transform.position + helperCamera.transform.forward * 2 + helperCamera.transform.right,
+            transform.rotation);
 		bowHold.transform.position = helperCamera.transform.position
 			+ helperCamera.transform.forward * 2
 			+ helperCamera.transform.right;
 		bowHold.transform.SetParent(helperCamera.transform);
 		bowAnimation = bowHold.GetComponent<Animation>();
 		stringOnBow = GameObject.FindGameObjectWithTag("String").GetComponent<Transform>();
+
+
+		// Position the Text and Texture in the center of the box
+		style.alignment = TextAnchor.LowerRight;
+
+		// Position the Text below the Texture (rather than to the right of it)
+		style.imagePosition = ImagePosition.ImageLeft;
+		style.fontSize = 80;
+		style.normal.textColor = Color.white;
+
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-		print (currentPercentageDrawn);
 		mousePositionWorldSpace = helperCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffset));
         bowHold.transform.LookAt(mousePositionWorldSpace);
 		if(timeLeft >= 0) {
@@ -135,7 +145,8 @@ public class ArcherShooting : MonoBehaviour {
 		float reticleXLocation = Input.mousePosition.x - currentReticleSize/2;
 		float reticleYLocation = (Screen.height - Input.mousePosition.y) - ((currentReticleSize) / 2);
 		GUI.DrawTexture (new Rect (reticleXLocation, reticleYLocation, currentReticleSize, currentReticleSize), crosshairImage);
-
+		content = new GUIContent(" x " + (quiverSize - numberArrowsShot), arrowImage, "Arrows left");
+		GUI.Box(new Rect(0, 0, Screen.width - 100, Screen.height - 100), content, style);
 	}
 
 	private void ResetDrawMath() {
