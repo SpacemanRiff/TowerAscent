@@ -26,25 +26,27 @@ public class Lvl_preview : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (timer != 0){
-			timer--;
+			timer --;
 		}
 	}
 	void OnTriggerEnter(Collider other) {
 
 		if (tag == "Next" && other.tag == "VRController" && timer == 0) {
 			current = previews [i];
-			if (i < 4) {//replace with length of array later.
+			if (i < 7) {//replace with length of array later.
 				i++;
 			} else {
 				i = 0;
 			}
-			
+			timer = 30;
 			current.SetActive (false);
 			current = previews [i];
 			current.SetActive (true);
             reciever.levelName = levelNames[i];
             reciever.loadLeaderboard();
-			timer = 15;
+			timer = 30;
+			levelName = scene [i];
+			LevelText.text = levelName;
 		}
 
 		if (tag == "Prev" && other.tag == "VRController" && timer == 0) {
@@ -52,24 +54,27 @@ public class Lvl_preview : MonoBehaviour {
 			if (i > 0) {
 				i--;
 			} else {
-				i = 4;//replace with length of array later.
+				i = 7;//replace with length of array later.
 			}
+			timer = 30;
 			current.SetActive (false);
 			current = previews [i];
 			current.SetActive (true);
             reciever.levelName = levelNames[i];
             reciever.loadLeaderboard();
-            timer = 15;
+            timer = 30;
+			levelName = scene [i];
+			LevelText.text = levelName;
 		}
 
 		if (tag == "Play" && other.tag == "VRController" && timer == 0) {
 			SceneManager.LoadSceneAsync(scene[i]);
 			SceneManager.UnloadScene("MainMenu");
-			timer = 15;
+			timer = 30;
 		}
 
-		levelName = scene [i];
-		LevelText.text = levelName;
+		//levelName = levelNames [i];
+		//LevelText.text = levelName;
 
 	}
 }
