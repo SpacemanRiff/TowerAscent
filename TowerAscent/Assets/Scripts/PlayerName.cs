@@ -19,22 +19,23 @@ public class PlayerName : MonoBehaviour {
         }
 
         NameText.text = SteamFriends.GetPersonaName();
+		playerName = NameText.text;
 	}
 
-    /*void Awake()
+    void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
-    }*/
+    }
 
     public string getName() {
         return playerName;
     }
 
     // Update is called once per frame
-    void Update () {
-        if(SceneManager.GetActiveScene().name =="MainMenu" && Input.anyKeyDown)
+    /*void Update () {
+        if(SceneManager.GetActiveScene().name =="MainMenu")
             NameText.text = playerName;
-    }
+    }*/
     
 
     void OnGUI()

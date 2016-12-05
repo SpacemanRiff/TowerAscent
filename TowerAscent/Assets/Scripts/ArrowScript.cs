@@ -13,10 +13,12 @@ public class ArrowScript : MonoBehaviour {
     public VRTK.VRTK_InteractGrab lefty;
     public VRTK.VRTK_InteractGrab righty;
 	private Rigidbody rb;
+	private AudioSource arrowAudioSource;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
+		arrowAudioSource = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -45,6 +47,8 @@ public class ArrowScript : MonoBehaviour {
             rb.isKinematic = true;
             rb.velocity = Vector3.zero;
             hasHit = true;
+			arrowAudioSource.Stop ();
+			arrowAudioSource.Play ();
         }
 	}
 

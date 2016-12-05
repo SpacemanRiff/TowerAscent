@@ -57,6 +57,7 @@ GameObject:
   - 114: {fileID: 114000010607560652}
   - 54: {fileID: 54000011509922870}
   - 114: {fileID: 114000012487831798}
+  - 82: {fileID: 82000011816112988}
   m_Layer: 0
   m_Name: Helper
   m_TagString: Helper
@@ -161,6 +162,80 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013093459156}
   m_Enabled: 0
+--- !u!82 &82000011816112988
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013476649218}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!92 &92000011536656224
 Behaviour:
   m_ObjectHideFlags: 1
@@ -232,13 +307,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crosshairImage: {fileID: 2800000, guid: f4299abd941c94493a5eab0fe8549e6c, type: 3}
   arrowImage: {fileID: 2800000, guid: b6ccc4d9a006b46f1ad0bcc1b880af40, type: 3}
-  arrowSpeed: 35
-  quiverSize: 9
+  arrowSpeed: 50
+  quiverSize: 10
   timeBetweenArrows: 1
   arrow: {fileID: 111768, guid: 802986766a97b4a108b97eb5fdf6e02f, type: 2}
   arrowTwo: {fileID: 137478, guid: 84ad69e92e6fe401c8848494bcedac7d, type: 2}
   arrowThree: {fileID: 111768, guid: 802986766a97b4a108b97eb5fdf6e02f, type: 2}
   bow: {fileID: 1000013858243664, guid: 11dfce2b2ba5f461087fe81148357e14, type: 2}
+  arrowFontSize: 35
+  bowDraw: {fileID: 8300000, guid: 3e2c430a1d3907a4da0c7ecad1c0354f, type: 3}
+  bowShoot: {fileID: 8300000, guid: 5201fea8e18aa4344a0aa9364b970390, type: 3}
   reticleMaxSize: 50
   reticleMinSize: 15
   drawBowTime: 0.35

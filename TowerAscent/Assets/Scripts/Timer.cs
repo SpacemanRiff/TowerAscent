@@ -79,6 +79,7 @@ public class Timer : MonoBehaviour {
         //RightHand.ForceRelease();
         //LeftHand.ForceRelease();
         rig.transform.position = rigPos;
+		timeyTime = "00:00:00";
         
         
         finished = false;

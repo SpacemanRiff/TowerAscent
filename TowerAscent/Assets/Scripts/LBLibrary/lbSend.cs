@@ -32,6 +32,7 @@ public class lbSend : MonoBehaviour {
         Debug.Log("Working on Sending");
         WWWForm form = new WWWForm();
         form.AddField("Name", playerName);
+		print (playerName);
         Debug.Log(playerTime);
         form.AddField("Time", playerTime);
         form.AddField("LevelName", levelName); //To Do: Set levelName = currentLevelName
