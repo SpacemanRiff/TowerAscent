@@ -57,7 +57,6 @@ public class ArcherShooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (currentPercentageDrawn);
 		mousePositionWorldSpace = helperCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffset));
         bowHold.transform.LookAt(mousePositionWorldSpace);
 		if(timeLeft >= 0) {
