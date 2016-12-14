@@ -137,7 +137,7 @@ public class ArcherShooting : MonoBehaviour {
 	}
 
 	private void ShootArrow() {
-		arrowCurrent.GetComponent<ArrowScript>().shoot();
+		arrowCurrent.GetComponent<ArrowScript>().Shoot();
 		arrowCurrent.GetComponent<Rigidbody>().velocity = arrowCurrent.transform.forward * arrowSpeed * (1-currentPercentageDrawn);
 		bowAnimation.Play();
 		bowAnimation["DrawBow"].speed = -2.0f;

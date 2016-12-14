@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof (NavMeshAgent))]
+[RequireComponent (typeof (UnityEngine.AI.NavMeshAgent))]
 [RequireComponent (typeof (Animator))]
 public class MoveTo : MonoBehaviour {
 
@@ -9,7 +9,7 @@ public class MoveTo : MonoBehaviour {
 	Transform[] navPoints;
 
 	[SerializeField]
-	NavMeshAgent agent;
+	UnityEngine.AI.NavMeshAgent agent;
 
 	public GameObject player;
 	public int destPoint;
@@ -20,7 +20,7 @@ public class MoveTo : MonoBehaviour {
 	private bool huntingPlayer;
 
 	void Start () {
-		agent = GetComponent<NavMeshAgent> ();
+		agent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
         if (navPoints.Length > 0)
         {
             agent.destination = navPoints [destPoint].position; //Go to the first position without waiting.
