@@ -14,11 +14,13 @@ public class ArrowScript : MonoBehaviour {
     public VRTK.VRTK_InteractGrab righty;
 	private Rigidbody rb;
 	private AudioSource arrowAudioSource;
+	private Vector3 globalScaleAtStart;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
 		arrowAudioSource = GetComponent<AudioSource> ();
+		globalScaleAtStart = transform.lossyScale;
 	}
 	
 	// Update is called once per frame
@@ -33,9 +35,8 @@ public class ArrowScript : MonoBehaviour {
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag.Equals(controllerTag) && !hasHit) {
 
-			if (leftHand.gripButtonPressed && lefty.GetGrabbedObject().Equals(this) && rightHand.gripButtonPressed && righty.GetGrabbedObject().Equals(this)) {
+			if ((leftHand.gripButtonPressed && lefty.GetGrabbedObject().Equals(this)) || (rightHand.gripButtonPressed && righty.GetGrabbedObject().Equals(this))) {
                 SteamManager.ArrowGrabAchievement();
-
             }
                    
         }
@@ -43,27 +44,30 @@ public class ArrowScript : MonoBehaviour {
             SteamManager.HeadshotAchievement();
         }
         if (!collision.gameObject.name.Equals(arrowName)) {
-            rb.useGravity = false;
-            rb.isKinematic = true;
-            rb.velocity = Vector3.zero;
-           // hasHit = true;
-			if (!collision.gameObject.tag.Equals (controllerTag) && !hasHit) {
-				arrowAudioSource.Stop ();
-				arrowAudioSource.Play ();
-			}
-			hasHit = true;
+			CollideWithAnythingButArrow(collision.gameObject);
         }
 	}
 
-    void OnCollisionExit(Collision collision) {
-        rb.useGravity = true;
-        rb.isKinematic = false;
-    }
+	private void CollideWithAnythingButArrow(GameObject newParent) {
+		//rb.constraints = RigidbodyConstraints.FreezeAll;
+		if (!hasHit) {
+			if (newParent.GetComponent<Rigidbody>() != null) {
+				gameObject.AddComponent<FixedJoint>().connectedBody = newParent.GetComponent<Rigidbody>();
+			} else {
+				gameObject.AddComponent<FixedJoint>();
+			}
+			arrowAudioSource.Stop ();
+			arrowAudioSource.Play ();
+		}
+		hasHit = true;
+	}
 
-	public void shoot() {
+	public void Shoot() {
 		rb.useGravity = true;
 		transform.SetParent(null);
 		rb.constraints = RigidbodyConstraints.None;
 		hasBeenShot = true;
 	}
+
+
 }
