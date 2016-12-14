@@ -42,8 +42,7 @@ public class ArrowScript : MonoBehaviour {
         }
         if (collision.gameObject.name.Equals(headName)) {
             SteamManager.HeadshotAchievement();
-        }
-        if (!collision.gameObject.name.Equals(arrowName)) {
+        } else if (!collision.gameObject.name.Equals(arrowName)) {
 			CollideWithAnythingButArrow(collision.gameObject);
         }
 	}

@@ -33,7 +33,7 @@ public class ArcherShooting : MonoBehaviour {
 	private float currentScale;
 	private float currentForce;
 	private float zOffset = 20.0f;
-	private Queue arrowsInGame = new Queue();
+	private ArrayList arrowsInGame = new ArrayList();
 	private Transform stringOnBow;
     Vector3 mousePositionWorldSpace, currentMousePosition;
 
@@ -132,11 +132,11 @@ public class ArcherShooting : MonoBehaviour {
 			bowHold.transform.rotation,
 			stringOnBow);
 		arrowCurrent.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-		arrowsInGame.Enqueue(arrowCurrent);
 		arrowInBow = true;
 	}
 
 	private void ShootArrow() {
+		arrowsInGame.Add (arrowCurrent);
 		arrowCurrent.GetComponent<ArrowScript>().Shoot();
 		arrowCurrent.GetComponent<Rigidbody>().velocity = arrowCurrent.transform.forward * arrowSpeed * (1-currentPercentageDrawn);
 		bowAnimation.Play();
@@ -166,5 +166,12 @@ public class ArcherShooting : MonoBehaviour {
 		currentPercentageDrawn = 1;
 		currentDrawTime = drawBowTime;
 		currentReticleSize = reticleMaxSize;
+	}
+
+	public void DestroyAllArrows() {
+		foreach (GameObject arrowToDestroy in arrowsInGame) {
+			GameObject.Destroy (arrowToDestroy);
+		}
+		arrowsInGame = new ArrayList ();
 	}
 }

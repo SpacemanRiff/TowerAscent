@@ -81,6 +81,8 @@ public class Timer : MonoBehaviour {
         rig.transform.position = rigPos;
 		timeyTime = "00:00:00";
         
+		GameObject helper = GameObject.FindGameObjectWithTag ("Helper");
+		helper.GetComponent<ArcherShooting> ().DestroyAllArrows ();
         
         finished = false;
         
