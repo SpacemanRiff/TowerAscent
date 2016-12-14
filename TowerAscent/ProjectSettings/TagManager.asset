@@ -19,6 +19,7 @@ TagManager:
   - VRHead
   - Ghost
   - String
+  - Terrain
   layers:
   - Default
   - TransparentFX

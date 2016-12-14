@@ -69,7 +69,7 @@ public class Lvl_preview : MonoBehaviour {
 
 		if (tag == "Play" && other.tag == "VRController" && timer == 0) {
 			SceneManager.LoadSceneAsync(scene[i]);
-			SceneManager.UnloadScene("MainMenu");
+			SceneManager.UnloadSceneAsync("MainMenu");
 			timer = 30;
 		}
 

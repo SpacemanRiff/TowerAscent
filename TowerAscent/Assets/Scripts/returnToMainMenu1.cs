@@ -14,7 +14,7 @@ public class returnToMainMenu1 : MonoBehaviour {
 	void Update () {
 		if (t == 0) {
 			SceneManager.LoadSceneAsync ("MainMenu");
-			SceneManager.UnloadScene (CurrentScene);
+			SceneManager.UnloadSceneAsync(CurrentScene);
 			print ("stuff");
 			//t += 1;
 		}

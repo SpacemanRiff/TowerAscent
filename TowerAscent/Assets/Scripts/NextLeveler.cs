@@ -23,10 +23,10 @@ public class NextLeveler : MonoBehaviour {
 			SceneManager.LoadSceneAsync("JuryRigFTW");
 			//SceneManager.LoadSceneAsync("MainMenu");
 			SceneManager.LoadSceneAsync(NextScene);
-			SceneManager.UnloadScene("JuryRigFTW");
+			SceneManager.UnloadSceneAsync("JuryRigFTW");
 			//SceneManager.UnloadScene(CurrentScene);
 			//SceneManager.UnloadScene("MainMenu");
-            SceneManager.UnloadScene(CurrentScene);
+            SceneManager.UnloadSceneAsync(CurrentScene);
 			gameObject.SetActive (false);
         } 
     }

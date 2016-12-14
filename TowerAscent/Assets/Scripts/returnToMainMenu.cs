@@ -20,7 +20,7 @@ public class returnToMainMenu : MonoBehaviour {
             //Debug.Log("Changing Scene To Main Menu!");
             //SceneManager.UnloadScene(CurrentScene);
             SceneManager.LoadSceneAsync("MainMenu");
-            SceneManager.UnloadScene(CurrentScene);
+            SceneManager.UnloadSceneAsync(CurrentScene);
         }
     }
 }
