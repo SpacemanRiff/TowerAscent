@@ -434,15 +434,10 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   platformArchitecture:
     iOS: 2
-    tvOS: 1
   scriptingBackend:
     Android: 0
-    Metro: 2
     Standalone: 0
-    WebGL: 1
-    WebPlayer: 0
     iOS: 1
-    tvOS: 1
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
   m_RenderingPath: 1
@@ -479,7 +474,7 @@ PlayerSettings:
   tizenGPSPermissions: 0
   tizenMicrophonePermissions: 0
   tizenDeploymentTarget: 
-  tizenDeploymentTargetType: -1
+  tizenDeploymentTargetType: -219157252
   tizenMinOSVersion: 0
   n3dsUseExtSaveData: 0
   n3dsCompressStaticMem: 1
