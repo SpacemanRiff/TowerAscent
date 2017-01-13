@@ -5,7 +5,11 @@ using System.Threading;
 
 public class SteamLeaderboards : MonoBehaviour
 {
-    private const string s_leaderboardName = "ATEST";
+    private static string s_leaderboardName = "TOWER_ASCENT_LB_T2";
+    //private const string s_leaderboardName2 = "TOWER_ASCENT_LB_01";
+    //public void setLeaderBoardName(string stringzilla) {
+     //   s_leaderboardName = stringzilla;
+    //}
     private const ELeaderboardUploadScoreMethod s_leaderboardMethod = ELeaderboardUploadScoreMethod.k_ELeaderboardUploadScoreMethodKeepBest;
 
     private static SteamLeaderboard_t s_currentLeaderboard;
@@ -28,14 +32,26 @@ public class SteamLeaderboards : MonoBehaviour
             m_uploadResult.Set(hSteamAPICall, OnLeaderboardUploadResult);
         }
     }
-
+    /*public static void UpdateScore2(int score) {
+        print("Made it to uploadscore");
+        if (!s_initialized) {
+            UnityEngine.Debug.Log("Can't upload to the leaderboard because isn't loadded yet");
+        } else {
+            UnityEngine.Debug.Log("uploading score(" + score + ") to steam leaderboard(" + s_leaderboardName2 + ")");
+            SteamAPICall_t hSteamAPICall = SteamUserStats.UploadLeaderboardScore(s_currentLeaderboard, s_leaderboardMethod, score, null, 0);
+            m_uploadResult.Set(hSteamAPICall, OnLeaderboardUploadResult);
+        }
+    }*/
     public static void Init()
     {
 		print ("Made it to init");
         SteamAPICall_t hSteamAPICall = SteamUserStats.FindLeaderboard(s_leaderboardName);
         m_findResult.Set(hSteamAPICall, OnLeaderboardFindResult);
+
+        //SteamAPICall_t hSteamAPICall2 = SteamUserStats.FindLeaderboard(s_leaderboardName2);
+       // m_findResult.Set(hSteamAPICall2, OnLeaderboardFindResult);
         //InitTimer();
-		SteamAPI.RunCallbacks(); 
+        SteamAPI.RunCallbacks(); 
     }
 
     static private void OnLeaderboardFindResult(LeaderboardFindResult_t pCallback, bool failure)
