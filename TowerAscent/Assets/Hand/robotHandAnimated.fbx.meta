@@ -1,0 +1,696 @@
+fileFormatVersion: 2
+guid: 30e00c1b3023d4040bd862f9ec839ef5
+timeCreated: 1484376380
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone.001
+    100006: Bone.002
+    100008: Bone.003
+    100010: Bone.004
+    100012: Bone.005
+    100014: Bone.005_end
+    100016: Bone.006
+    100018: Bone.007
+    100020: Bone.008
+    100022: Bone.009
+    100024: Bone.010
+    100026: Bone.011
+    100028: Bone.011_end
+    100030: Bone.012
+    100032: Bone.013
+    100034: Bone.014
+    100036: Bone.015
+    100038: Bone.016
+    100040: Bone.017
+    100042: Bone.017_end
+    100044: Bone.018
+    100046: Bone.019
+    100048: Bone.020
+    100050: Bone.021
+    100052: Bone.022
+    100054: Bone.023
+    100056: Bone.023_end
+    100058: Bone.024
+    100060: Bone.025
+    100062: Bone.026
+    100064: Bone.027
+    100066: Bone.028
+    100068: Bone.028_end
+    100070: Decor1
+    100072: Fingers
+    100074: Fingers.002
+    100076: Fingers.003
+    100078: Fingers.004
+    100080: Fingers.005
+    100082: Fingers.006
+    100084: Fingers.007
+    100086: Fingers.008
+    100088: Fingers.009
+    100090: Fingers.010
+    100092: Fingers.011
+    100094: Fingers.012
+    100096: Fingers.013
+    100098: Fingers.014
+    100100: Fingers.015
+    100102: Fingers.016
+    100104: Fingers.017
+    100106: Fingers.018
+    100108: Fingers.019
+    100110: Fingers.020
+    100112: Fingers.021
+    100114: Fingers.022
+    100116: Fingers.023
+    100118: Fingers.024
+    100120: Fingers.025
+    100122: Fingers.026
+    100124: Fingers.027
+    100126: Fingers.028
+    100128: Fingers.029
+    100130: Fingers.030
+    100132: Hand
+    100134: //RootNode
+    100136: Tendrils
+    100138: TimerFace
+    100140: TimerHolder
+    400000: Armature
+    400002: Bone
+    400004: Bone.001
+    400006: Bone.002
+    400008: Bone.003
+    400010: Bone.004
+    400012: Bone.005
+    400014: Bone.005_end
+    400016: Bone.006
+    400018: Bone.007
+    400020: Bone.008
+    400022: Bone.009
+    400024: Bone.010
+    400026: Bone.011
+    400028: Bone.011_end
+    400030: Bone.012
+    400032: Bone.013
+    400034: Bone.014
+    400036: Bone.015
+    400038: Bone.016
+    400040: Bone.017
+    400042: Bone.017_end
+    400044: Bone.018
+    400046: Bone.019
+    400048: Bone.020
+    400050: Bone.021
+    400052: Bone.022
+    400054: Bone.023
+    400056: Bone.023_end
+    400058: Bone.024
+    400060: Bone.025
+    400062: Bone.026
+    400064: Bone.027
+    400066: Bone.028
+    400068: Bone.028_end
+    400070: Decor1
+    400072: Fingers
+    400074: Fingers.002
+    400076: Fingers.003
+    400078: Fingers.004
+    400080: Fingers.005
+    400082: Fingers.006
+    400084: Fingers.007
+    400086: Fingers.008
+    400088: Fingers.009
+    400090: Fingers.010
+    400092: Fingers.011
+    400094: Fingers.012
+    400096: Fingers.013
+    400098: Fingers.014
+    400100: Fingers.015
+    400102: Fingers.016
+    400104: Fingers.017
+    400106: Fingers.018
+    400108: Fingers.019
+    400110: Fingers.020
+    400112: Fingers.021
+    400114: Fingers.022
+    400116: Fingers.023
+    400118: Fingers.024
+    400120: Fingers.025
+    400122: Fingers.026
+    400124: Fingers.027
+    400126: Fingers.028
+    400128: Fingers.029
+    400130: Fingers.030
+    400132: Hand
+    400134: //RootNode
+    400136: Tendrils
+    400138: TimerFace
+    400140: TimerHolder
+    2300000: Decor1
+    2300002: Fingers
+    2300004: Fingers.002
+    2300006: Fingers.003
+    2300008: Fingers.004
+    2300010: Fingers.005
+    2300012: Fingers.006
+    2300014: Fingers.007
+    2300016: Fingers.008
+    2300018: Fingers.009
+    2300020: Fingers.010
+    2300022: Fingers.011
+    2300024: Fingers.012
+    2300026: Fingers.013
+    2300028: Fingers.014
+    2300030: Fingers.015
+    2300032: Fingers.016
+    2300034: Fingers.017
+    2300036: Fingers.018
+    2300038: Fingers.019
+    2300040: Fingers.020
+    2300042: Fingers.021
+    2300044: Fingers.022
+    2300046: Fingers.023
+    2300048: Fingers.024
+    2300050: Fingers.025
+    2300052: Fingers.026
+    2300054: Fingers.027
+    2300056: Fingers.028
+    2300058: Fingers.029
+    2300060: Fingers.030
+    2300062: Hand
+    2300064: Tendrils
+    2300066: TimerFace
+    2300068: TimerHolder
+    3300000: Decor1
+    3300002: Fingers
+    3300004: Fingers.002
+    3300006: Fingers.003
+    3300008: Fingers.004
+    3300010: Fingers.005
+    3300012: Fingers.006
+    3300014: Fingers.007
+    3300016: Fingers.008
+    3300018: Fingers.009
+    3300020: Fingers.010
+    3300022: Fingers.011
+    3300024: Fingers.012
+    3300026: Fingers.013
+    3300028: Fingers.014
+    3300030: Fingers.015
+    3300032: Fingers.016
+    3300034: Fingers.017
+    3300036: Fingers.018
+    3300038: Fingers.019
+    3300040: Fingers.020
+    3300042: Fingers.021
+    3300044: Fingers.022
+    3300046: Fingers.023
+    3300048: Fingers.024
+    3300050: Fingers.025
+    3300052: Fingers.026
+    3300054: Fingers.027
+    3300056: Fingers.028
+    3300058: Fingers.029
+    3300060: Fingers.030
+    3300062: Hand
+    3300064: Tendrils
+    3300066: TimerFace
+    3300068: TimerHolder
+    4300000: Fingers.007
+    4300002: Fingers.018
+    4300004: Fingers.006
+    4300006: Fingers.005
+    4300008: Fingers.004
+    4300010: Fingers.003
+    4300012: Fingers.002
+    4300014: Fingers.017
+    4300016: Fingers.016
+    4300018: Fingers.015
+    4300020: Fingers.014
+    4300022: Fingers.013
+    4300024: Fingers.019
+    4300026: Fingers.022
+    4300028: Fingers.024
+    4300030: Fingers.026
+    4300032: Fingers.028
+    4300034: Fingers.030
+    4300036: Fingers.021
+    4300038: Fingers.023
+    4300040: Fingers.025
+    4300042: Fingers.027
+    4300044: Fingers.029
+    4300046: Fingers.011
+    4300048: Fingers.010
+    4300050: Fingers.009
+    4300052: Fingers.008
+    4300054: Hand
+    4300056: Fingers
+    4300058: Fingers.020
+    4300060: Fingers.012
+    4300062: TimerFace
+    4300064: TimerHolder
+    4300066: Decor1
+    4300068: Tendrils
+    7400000: Armature|ArmatureAction
+    7400002: Armature|Fingers.002Action
+    7400004: Armature|Fingers.003Action
+    7400006: Armature|Fingers.004Action
+    7400008: Armature|Fingers.005Action
+    7400010: Armature|Fingers.006Action
+    7400012: Armature|Fingers.007Action
+    7400014: Armature|Fingers.008Action
+    7400016: Armature|Fingers.009Action
+    7400018: Armature|Fingers.010Action
+    7400020: Armature|Fingers.011Action
+    7400022: Armature|Fingers.012Action
+    7400024: Armature|Fingers.013Action
+    7400026: Armature|Fingers.014Action
+    7400028: Armature|Fingers.015Action
+    7400030: Armature|Fingers.016Action
+    7400032: Armature|Fingers.017Action
+    7400034: Armature|Fingers.018Action
+    7400036: Armature|Fingers.019Action
+    7400038: Armature|Fingers.020Action
+    7400040: Armature|Fingers.021Action
+    7400042: Armature|Fingers.022Action
+    7400044: Armature|Fingers.023Action
+    7400046: Armature|Fingers.024Action
+    7400048: Armature|Fingers.025Action
+    7400050: Armature|Fingers.026Action
+    7400052: Armature|Fingers.027Action
+    7400054: Armature|Fingers.028Action
+    7400056: Armature|Fingers.029Action
+    7400058: Armature|Fingers.030Action
+    7400060: Armature|GrabbingAnimation
+    7400062: Armature|RestingAnimation
+    7400064: Armature|RestingAnimation0
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|RestingAnimation0
+      takeName: Armature|RestingAnimation
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.001
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005/Bone.005_end
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005/Fingers.002
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Fingers.003
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Fingers.004
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Fingers.005
+        weight: 1
+      - path: Armature/Bone/Bone.001/Fingers.006
+        weight: 1
+      - path: Armature/Bone/Fingers.007
+        weight: 1
+      - path: Armature/Bone/Fingers.018
+        weight: 1
+      - path: Armature/Bone.006
+        weight: 1
+      - path: Armature/Bone.006/Bone.007
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010/Bone.011
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010/Bone.011/Bone.011_end
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010/Bone.011/Fingers.013
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010/Fingers.014
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Fingers.015
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Fingers.016
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Fingers.017
+        weight: 1
+      - path: Armature/Bone.012
+        weight: 1
+      - path: Armature/Bone.012/Bone.013
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Bone.016
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Bone.016/Bone.017
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Bone.016/Bone.017/Bone.017_end
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Bone.016/Bone.017/Fingers.030
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Bone.016/Fingers.028
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Fingers.026
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Fingers.024
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Fingers.022
+        weight: 1
+      - path: Armature/Bone.012/Fingers.019
+        weight: 1
+      - path: Armature/Bone.018
+        weight: 1
+      - path: Armature/Bone.018/Bone.019
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Bone.022
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Bone.022/Bone.023
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Bone.022/Bone.023/Bone.023_end
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Bone.022/Bone.023/Fingers.029
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Bone.022/Fingers.027
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Fingers.025
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Fingers.023
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Fingers.021
+        weight: 1
+      - path: Armature/Bone.024
+        weight: 1
+      - path: Armature/Bone.024/Bone.025
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Bone.027
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Bone.027/Bone.028
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Bone.027/Bone.028/Bone.028_end
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Bone.027/Bone.028/Fingers.008
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Bone.027/Fingers.009
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Fingers.010
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Fingers.011
+        weight: 1
+      - path: Hand
+        weight: 1
+      - path: Hand/Decor1
+        weight: 1
+      - path: Hand/Fingers
+        weight: 1
+      - path: Hand/Fingers/Fingers.012
+        weight: 1
+      - path: Hand/Fingers/Fingers.020
+        weight: 1
+      - path: Hand/Tendrils
+        weight: 1
+      - path: Hand/TimerFace
+        weight: 1
+      - path: Hand/TimerHolder
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|GrabbingAnimation
+      takeName: Armature|GrabbingAnimation
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.001
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005/Bone.005_end
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005/Fingers.002
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Fingers.003
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Fingers.004
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Fingers.005
+        weight: 1
+      - path: Armature/Bone/Bone.001/Fingers.006
+        weight: 1
+      - path: Armature/Bone/Fingers.007
+        weight: 1
+      - path: Armature/Bone/Fingers.018
+        weight: 1
+      - path: Armature/Bone.006
+        weight: 1
+      - path: Armature/Bone.006/Bone.007
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010/Bone.011
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010/Bone.011/Bone.011_end
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010/Bone.011/Fingers.013
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010/Fingers.014
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Bone.009/Fingers.015
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Bone.008/Fingers.016
+        weight: 1
+      - path: Armature/Bone.006/Bone.007/Fingers.017
+        weight: 1
+      - path: Armature/Bone.012
+        weight: 1
+      - path: Armature/Bone.012/Bone.013
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Bone.016
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Bone.016/Bone.017
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Bone.016/Bone.017/Bone.017_end
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Bone.016/Bone.017/Fingers.030
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Bone.016/Fingers.028
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Bone.015/Fingers.026
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Bone.014/Fingers.024
+        weight: 1
+      - path: Armature/Bone.012/Bone.013/Fingers.022
+        weight: 1
+      - path: Armature/Bone.012/Fingers.019
+        weight: 1
+      - path: Armature/Bone.018
+        weight: 1
+      - path: Armature/Bone.018/Bone.019
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Bone.022
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Bone.022/Bone.023
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Bone.022/Bone.023/Bone.023_end
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Bone.022/Bone.023/Fingers.029
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Bone.022/Fingers.027
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Bone.021/Fingers.025
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Bone.020/Fingers.023
+        weight: 1
+      - path: Armature/Bone.018/Bone.019/Fingers.021
+        weight: 1
+      - path: Armature/Bone.024
+        weight: 1
+      - path: Armature/Bone.024/Bone.025
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Bone.027
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Bone.027/Bone.028
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Bone.027/Bone.028/Bone.028_end
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Bone.027/Bone.028/Fingers.008
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Bone.027/Fingers.009
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Bone.026/Fingers.010
+        weight: 1
+      - path: Armature/Bone.024/Bone.025/Fingers.011
+        weight: 1
+      - path: Hand
+        weight: 1
+      - path: Hand/Decor1
+        weight: 1
+      - path: Hand/Fingers
+        weight: 1
+      - path: Hand/Fingers/Fingers.012
+        weight: 1
+      - path: Hand/Fingers/Fingers.020
+        weight: 1
+      - path: Hand/Tendrils
+        weight: 1
+      - path: Hand/TimerFace
+        weight: 1
+      - path: Hand/TimerHolder
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

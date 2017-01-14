@@ -1,70 +1,42 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class HandMovementRight : MonoBehaviour {
-    public GameObject thumb, thumbKnuckle, thumbWrist;
-    public GameObject[] gripfingers, GripKnucklesTwo, GripKnucklesOne;
-    private SteamVR_Controller.Device controller { get { return SteamVR_Controller.Input((int)trackedObj.index); } }
-    private SteamVR_TrackedObject trackedObj;
-    public Timer timer;
-    public GameObject rightHand;
-    public lbReceive reciever;
-    public AudioClip grabSound;
-    public AudioClip hoverSound;
-    public AudioClip resetSound;
-
+    public AudioClip grabSound, hoverSound, resetSound;
     private AudioSource audioSource;
 
-    private Valve.VR.EVRButtonId gripButton = Valve.VR.EVRButtonId.k_EButton_Grip;
-    public bool gripButtonDown = false;
-    public bool gripButtonUp = false;
-    public bool gripButtonPressed = false;
-    private bool colliding;
+    private SteamVR_Controller.Device controller { get { return SteamVR_Controller.Input((int)trackedObj.index); } }
+    private SteamVR_TrackedObject trackedObj;
 
+    public GameObject rightHand;
+    private Animator handAnimator;
+    
+    public Timer timer;
 
-    private Valve.VR.EVRButtonId touchpad = Valve.VR.EVRButtonId.k_EButton_DPad_Up;
     public HandMovementLeft otherHand;
 
-
+    private Valve.VR.EVRButtonId gripButton = Valve.VR.EVRButtonId.k_EButton_Grip;
+    public bool gripButtonDown = false, gripButtonUp = false, gripButtonPressed = false;
+    
+    private Valve.VR.EVRButtonId restartButton = Valve.VR.EVRButtonId.k_EButton_ApplicationMenu;
+    public bool restartButtonDown = false, restartButtonUp = false, restartButtonPressed = false;
 
     private Valve.VR.EVRButtonId triggerButton = Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger;
-    private Valve.VR.EVRButtonId restartButton = Valve.VR.EVRButtonId.k_EButton_ApplicationMenu;
-    public bool restartButtonDown = false;
-    public bool restartButtonUp = false;
-    public bool restartButtonPressed = false;
-    public bool triggerButtonDown = false;
-    public bool triggerButtonUp = false;
-    public bool triggerButtonPressed = false;
-    
-
-    public bool TouchPadButtonDown = false;
-    private Quaternion gripRotation, thumbRotation, thumbKnuckleRotation, 
-        gripKnuckleOneRotation, gripKnuckleTwoRotation, thumbWristRotation;
+    public bool triggerButtonDown = false, triggerButtonUp = false, triggerButtonPressed = false;
 
     // Use this for initialization
     void Start() {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
-        gripRotation = gripfingers[0].transform.localRotation;
-        gripKnuckleOneRotation = GripKnucklesOne[0].transform.localRotation;
-        gripKnuckleTwoRotation = GripKnucklesTwo[0].transform.localRotation;
-        thumbRotation = thumb.transform.localRotation;
-        thumbKnuckleRotation = thumbKnuckle.transform.localRotation;
-        thumbWristRotation = thumbWrist.transform.localRotation;
         audioSource = GetComponent<AudioSource>();
+        handAnimator = rightHand.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update() {
-        //check for grip button, then close grip fingers and thumb
-        //Debug.Log(touchpad.ToString());
 
         if (controller == null) {
             Debug.Log("Controller not initialized");
             return;
         }
-        //TouchPadButtonDown = controller.GetAxis(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad);
-        //Debug.Log(TouchPadButtonDown);
 
         restartButtonDown = controller.GetPressDown(restartButton);
 
@@ -79,87 +51,22 @@ public class HandMovementRight : MonoBehaviour {
         if (restartButtonDown && !gripButtonPressed && !otherHand.gripButtonPressed) {
             timer.reset();
             audioSource.PlayOneShot(resetSound, 1.00f);
-            StartCoroutine(reciever.receive());
         }
 
         if (gripButtonDown) {
-            Quaternion Rotation;
-            foreach (GameObject finger in gripfingers) {
-                Rotation = finger.transform.localRotation;
-                Rotation.eulerAngles = new Vector3(Rotation.x - 60, Rotation.y, Rotation.z);
-                finger.transform.localRotation = Rotation;
-            }
-            foreach (GameObject knuckle in GripKnucklesOne) {
-                Rotation = knuckle.transform.localRotation;
-                Rotation.eulerAngles = new Vector3(Rotation.x - 60, Rotation.y, Rotation.z);
-                knuckle.transform.localRotation = Rotation;
-            }
-            foreach (GameObject knuckle in GripKnucklesTwo) {
-                Rotation = knuckle.transform.localRotation;
-                Rotation.eulerAngles = new Vector3(Rotation.x - 60, Rotation.y, Rotation.z);
-                knuckle.transform.localRotation = Rotation;
-            }
-            Rotation = thumb.transform.localRotation;
-            Rotation.eulerAngles = new Vector3(-18, -12, 37);
-            thumb.transform.localRotation = Rotation;
-
-            Rotation = thumbKnuckle.transform.localRotation;
-            Rotation.eulerAngles = new Vector3(-.2f, 32, 4);
-            thumbKnuckle.transform.localRotation = Rotation;
-
-            Rotation = thumbWrist.transform.localRotation;
-            Rotation.eulerAngles = new Vector3(15, 20, -140);
-            thumbWrist.transform.localRotation = Rotation;
-
-            //Debug.Log("Grip was pressed");
+            handAnimator.SetBool("grabbing", true);
         }
 
         if (gripButtonUp) {
-            Quaternion Rotation;
-            foreach (GameObject finger in gripfingers) {
-                Rotation = finger.transform.localRotation;
-                Rotation.eulerAngles = new Vector3(Rotation.x, Rotation.y, Rotation.z);
-                finger.transform.localRotation = Rotation;
-            }
-            foreach (GameObject knuckle in GripKnucklesOne) {
-                Rotation = knuckle.transform.localRotation;
-                Rotation.eulerAngles = new Vector3(Rotation.x, Rotation.y, Rotation.z);
-                knuckle.transform.localRotation = Rotation;
-            }
-            foreach (GameObject knuckle in GripKnucklesTwo) {
-                Rotation = knuckle.transform.localRotation;
-                Rotation.eulerAngles = new Vector3(Rotation.x, Rotation.y, Rotation.z);
-                knuckle.transform.localRotation = Rotation;
-            }
-            Rotation = thumb.transform.localRotation;
-            Rotation.eulerAngles = new Vector3(Rotation.x, Rotation.y, Rotation.z);
-            thumb.transform.localRotation = Rotation;
-
-            Rotation = thumbKnuckle.transform.localRotation;
-            Rotation.eulerAngles = new Vector3(Rotation.x, Rotation.y, Rotation.z);
-            thumbKnuckle.transform.localRotation = Rotation;
-
-            Rotation = thumbWrist.transform.localRotation;
-            Rotation.eulerAngles = new Vector3(Rotation.x, Rotation.y, Rotation.z);
-            thumbWrist.transform.localRotation = thumbWristRotation;
-
-            //Debug.Log("Grip was released");
+            handAnimator.SetBool("grabbing", false);
         }
-
-        
-
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Climbable" && gripButtonDown)
-        {
+    void OnTriggerEnter(Collider other) {
+        if (other.tag == "Climbable" && gripButtonDown) {
             audioSource.PlayOneShot(grabSound, 0.15f);
         }
-        else if (other.tag == "Climbable" && !gripButtonDown)
-        {
+        else if (other.tag == "Climbable" && !gripButtonDown) {
             audioSource.PlayOneShot(hoverSound, 0.05f);
         }
     }
-
-
 }
