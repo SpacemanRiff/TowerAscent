@@ -5,11 +5,7 @@ using System.Threading;
 
 public class SteamLeaderboards : MonoBehaviour
 {
-    private static string s_leaderboardName = "TOWER_ASCENT_LB_T2";
-    //private const string s_leaderboardName2 = "TOWER_ASCENT_LB_01";
-    //public void setLeaderBoardName(string stringzilla) {
-     //   s_leaderboardName = stringzilla;
-    //}
+    private static string s_leaderboardName = "ATEST";
     private const ELeaderboardUploadScoreMethod s_leaderboardMethod = ELeaderboardUploadScoreMethod.k_ELeaderboardUploadScoreMethodKeepBest;
 
     private static SteamLeaderboard_t s_currentLeaderboard;

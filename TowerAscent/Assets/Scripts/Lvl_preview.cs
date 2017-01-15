@@ -12,15 +12,15 @@ public class Lvl_preview : MonoBehaviour {
 	static int timer = 0;
 	public Text LevelText;
 	public static string levelName = "";
-    public lbReceive reciever;
     public string[] levelNames;
 
 	// Use this for initialization
 	void Start() {
 		current = previews[i];
 		current.SetActive (true);
-        reciever.levelName = levelNames[i];
-        reciever.loadLeaderboard();
+        //TODO redo leaderboard previews for main menu
+        //reciever.levelName = levelNames[i];
+        //reciever.loadLeaderboard();
     }
 
 	// Update is called once per frame
@@ -42,8 +42,8 @@ public class Lvl_preview : MonoBehaviour {
 			current.SetActive (false);
 			current = previews [i];
 			current.SetActive (true);
-            reciever.levelName = levelNames[i];
-            reciever.loadLeaderboard();
+            //reciever.levelName = levelNames[i];
+            //reciever.loadLeaderboard();
 			timer = 30;
 			levelName = scene [i];
 			LevelText.text = levelName;
@@ -60,8 +60,8 @@ public class Lvl_preview : MonoBehaviour {
 			current.SetActive (false);
 			current = previews [i];
 			current.SetActive (true);
-            reciever.levelName = levelNames[i];
-            reciever.loadLeaderboard();
+            //reciever.levelName = levelNames[i];
+            //reciever.loadLeaderboard();
             timer = 30;
 			levelName = scene [i];
 			LevelText.text = levelName;
