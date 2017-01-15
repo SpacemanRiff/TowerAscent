@@ -2,60 +2,58 @@
 using System.Collections;
 using UnityEngine.UI;
 using VRTK;
+using System.Timers;
+using System;
 
 public class Timer : MonoBehaviour {
     
     public float time = 0.0f;
-    public int timeMinute =0 , timeSecond = 0;
+    public float score;
+    public decimal upperLimit = 180; //total time in s  = 3min
+    public decimal multiplier = 1000;
+    public decimal scoreBeforeRound;
     public Text TimerText = null;
 	public bool stopped = true;
     bool finished;
     public GameObject rig;
-    public GameObject lightArray;
     private Vector3 rigPos;
-    public string timeyTime, strMin, strSec, strMilSec;
     public HandMovementLeft LeftHand;
     public HandMovementRight RightHand;
     public VRTK_InteractGrab LeftHandGrasp, RightHandGrasp;
     //public FileInputOutput FIO;
 
     void Start () {
+        StartCoroutine(StartTimer());
         rigPos = rig.transform.position;
         stopped = true;
         finished = false;
         time = 0.0f;
-        timeMinute = 0;
-        timeSecond = 0;
 	}
-	
-	
-	void Update () {
 
+    IEnumerator StartTimer() {
+        float tempTime = 0;
+        while (stopped) {
+            tempTime = Time.time;
+            yield return new WaitForEndOfFrame();
+        }
+        while (!stopped) {
+            yield return new WaitForSeconds(.05f);
+            score = (Time.time - tempTime);
+            TimerText.text = score.ToString("F3") + " s";
 
-        if (!stopped && !finished){
-            time += Time.deltaTime;
-            TimerText.text = "Timer: " + time.ToString("F2");
-            if (time >= .6) {
-                timeSecond++;
-                time = 0;
-            }
-            if (timeSecond >= 60) {
-                timeSecond = 0;
-                timeMinute++;
-            }
-
-            TimerText.text = "Timer: " + strMin + ":" + strSec + ":" + strMilSec;
-
-        }else if(stopped && timeSecond < 1 && timeMinute < 1 && !finished)
-        {
-            TimerText.text = "Timer: " + "0" + ":0" + "0" + ":" + "00";
         }
 
-        getTime();
-        
+    }
+
+    void Update () {
+        //getScore();
+        if (stopped) {
+            TimerText.text = "0";
+        }
     }
     public void StopTime() {
         stopped = true;
+        StartCoroutine(StartTimer());
     }
 
     public void StartTime() {
@@ -63,7 +61,7 @@ public class Timer : MonoBehaviour {
     }
 
     public void reset() {
-        Debug.Log("RESET");
+        //Debug.Log("RESET");
         if(LeftHand.gripButtonPressed || RightHand.gripButtonPressed) {
             RightHandGrasp.ForceRelease();
             LeftHandGrasp.ForceRelease();
@@ -74,12 +72,7 @@ public class Timer : MonoBehaviour {
 		//FIO.PlayerJustReset = true;
 
         time = 0.0f;
-        timeMinute = 0;
-        timeSecond = 0;
-        //RightHand.ForceRelease();
-        //LeftHand.ForceRelease();
         rig.transform.position = rigPos;
-		timeyTime = "00:00:00";
         
 		GameObject helper = GameObject.FindGameObjectWithTag ("Helper");
 		helper.GetComponent<ArcherShooting> ().DestroyAllArrows ();
@@ -90,38 +83,15 @@ public class Timer : MonoBehaviour {
 
     public void FinishLevel() {
         finished = true;
-        
     }
-    public void getTime() {
-        
-        //Debug.Log(timeMinute);
-        //Debug.Log(timeSecond);
-        if (timeMinute < 10)
-        {
-            strMin = "0" + timeMinute;
-        }
-        else {
-            strMin = "" + timeMinute; 
-        }
-
-        if (timeSecond < 10)
-        {
-            strSec = "0" + timeSecond;
-        }
-        else
-        {
-            strSec = "" + timeSecond;
-        }
-
-        if (time < .10)
-        {
-            strMilSec = "0" + Mathf.Round((time * 100)).ToString();
-        }
-        else
-        {
-            strMilSec = "" + Mathf.Round((time * 100)).ToString();
-        }
-        timeyTime = strMin + ":" + strSec + ":" + strMilSec;
+    public int getScore() {
+        print("Score: " + score);
+        print((decimal)score/upperLimit);
+        print((1 - ((decimal)score / upperLimit)));
+        print((1 - ((decimal)score / upperLimit)) * 100 * multiplier);
+        scoreBeforeRound = ((1 - ((decimal)score / upperLimit)) * 100 * multiplier);
+        print(scoreBeforeRound);
+        return (int)scoreBeforeRound;
     }
 
     void OnTriggerEnter(Collider other)

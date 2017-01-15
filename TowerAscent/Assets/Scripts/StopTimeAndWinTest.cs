@@ -15,13 +15,15 @@ public class StopTimeAndWinTest : MonoBehaviour {
 
     void Start() {
         SteamLeaderboards.Init();
+        //Set leaderboard name here
         audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter(Collider other){
         if (other.tag == "VRController") {
-            SteamLeaderboards.UpdateScore(136);
             Timer.StopTime();
+            print(Timer.getScore());
+            SteamLeaderboards.UpdateScore(Timer.getScore());
             audioSource.PlayOneShot(victorySound, 0.15f);
 			print ("Sent score");
             Timer.FinishLevel();
