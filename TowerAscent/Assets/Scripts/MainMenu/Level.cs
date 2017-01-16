@@ -41,13 +41,26 @@ public class Level {
     }
 
 	private string ConvertPrefabNameToLevelName(string prefabName) {
+        //Level_1_Prefab
+        prefabName = RemoveEndOfPrefabString(prefabName);
+        //Level_1
+        prefabName.Replace('_', ' ');
+        //Level 1
 		return prefabName;
 	}
 	private string ConvertPrefabNameToSceneName(string prefabName) {
-		return prefabName;
+        prefabName = RemoveEndOfPrefabString(prefabName);
+        prefabName += "_Scene";
+        return prefabName;
 	}
 	private string ConvertPrefabNameToLeaderboardName(string prefabName) {
+        prefabName = RemoveEndOfPrefabString(prefabName);
+        prefabName += "_LB";
 		return prefabName;
 	}
+
+    private string RemoveEndOfPrefabString(string prefabName) {
+        return prefabName.Remove(prefabName.Length - 7);//7 could be wrong. need to test
+    }
 
 }
