@@ -34,6 +34,12 @@ public class Level {
 		}
 	}
 
+    public GameObject GetPrefab {
+        get {
+            return prefab;
+        }
+    }
+
 	private string ConvertPrefabNameToLevelName(string prefabName) {
 		return prefabName;
 	}
