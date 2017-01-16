@@ -10,7 +10,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 76a8e05fe8bf047448714cebb4f8c886, type: 3}
   m_ShaderKeywords: _EMISSION _YAXIS_ON
   m_LightmapFlags: 1
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2450
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -172,7 +172,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.527141, g: 0.9558824, b: 0.9558824, a: 1}
+      second: {r: 0.39922145, g: 0.7647059, b: 0.7647059, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}

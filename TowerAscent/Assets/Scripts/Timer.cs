@@ -20,6 +20,9 @@ public class Timer : MonoBehaviour {
     public HandMovementLeft LeftHand;
     public HandMovementRight RightHand;
     public VRTK_InteractGrab LeftHandGrasp, RightHandGrasp;
+	public float min = 0;
+	public string zeroPlace = "0";
+
     //public FileInputOutput FIO;
 
     void Start () {
@@ -39,7 +42,20 @@ public class Timer : MonoBehaviour {
         while (!stopped) {
             yield return new WaitForSeconds(.05f);
             score = (Time.time - tempTime);
-            TimerText.text = score.ToString("F3") + " s";
+			if (score / 60 >= 1 + min) {
+				min++;
+			}
+			if ((score - (min * 60)) < 10) {
+				zeroPlace = "0";
+			} 
+			else {
+				zeroPlace = "";
+			}
+
+			//min = Mathf.RoundToInt(score / 120);
+			
+
+			TimerText.text = ((min+":"+(zeroPlace+(score-(min*60)).ToString("F2"))).Replace(".",":"));
 
         }
 
@@ -91,7 +107,8 @@ public class Timer : MonoBehaviour {
         print((1 - ((decimal)score / upperLimit)) * 100 * multiplier);
         scoreBeforeRound = ((1 - ((decimal)score / upperLimit)) * 100 * multiplier);
         print(scoreBeforeRound);
-        return (int)scoreBeforeRound;
+        //return (int)scoreBeforeRound;
+		return ((int)(score * 1000));
     }
 
     void OnTriggerEnter(Collider other)

@@ -8,7 +8,7 @@ public class SteamLeaderboards : MonoBehaviour
     private static string s_leaderboardName = "ATEST";
     private const ELeaderboardUploadScoreMethod s_leaderboardMethod = ELeaderboardUploadScoreMethod.k_ELeaderboardUploadScoreMethodKeepBest;
 
-    private static SteamLeaderboard_t s_currentLeaderboard;
+    public static SteamLeaderboard_t s_currentLeaderboard;
     private static bool s_initialized = false;
     private static CallResult<LeaderboardFindResult_t> m_findResult = new CallResult<LeaderboardFindResult_t>();
     private static CallResult<LeaderboardScoreUploaded_t> m_uploadResult = new CallResult<LeaderboardScoreUploaded_t>();

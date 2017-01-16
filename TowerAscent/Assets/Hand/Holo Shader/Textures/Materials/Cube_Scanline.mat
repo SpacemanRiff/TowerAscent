@@ -138,7 +138,7 @@ Material:
       second: 0.02
     - first:
         name: _ScanlineDensity
-      second: 50
+      second: 0
     - first:
         name: _ScanlineExp
       second: 10
