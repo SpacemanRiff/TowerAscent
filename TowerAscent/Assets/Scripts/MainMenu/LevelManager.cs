@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class LevelManager : MonoBehaviour {
 
@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour {
 	void Start () {
         InitializeLevelData();
         currentLevel = 0;
-        previousLevel = levelNames.Count + 1;
+        previousLevel = levelNames.Count - 1;
         nextLevel = 1;//Admittedly will break if only 1 level. Just don't do that then :)
 	}
 

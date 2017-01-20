@@ -44,7 +44,7 @@ public class Level {
         //Level_1_Prefab
         prefabName = RemoveEndOfPrefabString(prefabName);
         //Level_1
-        prefabName.Replace('_', ' ');
+        prefabName = prefabName.Replace('_', ' ');
         //Level 1
 		return prefabName;
 	}
