@@ -82,12 +82,12 @@ public class Timer : MonoBehaviour {
             RightHandGrasp.ForceRelease();
             LeftHandGrasp.ForceRelease();
         }
-        StopTime();
+        //StopTime(); no longer stops time for checkpoint
 
 		//FIO = GameObject.FindGameObjectWithTag ("Ghost").GetComponent<FileInputOutput> ();
 		//FIO.PlayerJustReset = true;
 
-        time = 0.0f;
+		//time = 0.0f; no longer stops time for checkpoint
         rig.transform.position = rigPos;
         
 		GameObject helper = GameObject.FindGameObjectWithTag ("Helper");

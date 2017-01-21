@@ -2466,7 +2466,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 893597306}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5214723bcbed61148a1d4ecccfa5f25d, type: 3}
   m_Name: 
@@ -4726,6 +4726,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98ff43b4cfffbf34a9c73480e1976188, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1967937246 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 178374, guid: 933dc00178582c3469a7ade58d1e8ef0, type: 2}
+  m_PrefabInternal: {fileID: 2133467552}
+--- !u!114 &1967937247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967937246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5214723bcbed61148a1d4ecccfa5f25d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CheckpointSpawn: {fileID: 1893847075}
+  newRigPos: {x: 0, y: 0, z: 0}
+  timer: {fileID: 425365520}
 --- !u!4 &1992628858 stripped
 Transform:
   m_PrefabParentObject: {fileID: 458858, guid: c4539176e3d94634ebe6be9b37a72b91, type: 2}
