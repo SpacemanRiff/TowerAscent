@@ -23,6 +23,7 @@ public class CheckPoint : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		if (other.tag == "VRController") {
 			timer.updateCameraRigPosition (newRigPos);
+			print("Checkpoint changed");
 		}
 	
 	}
