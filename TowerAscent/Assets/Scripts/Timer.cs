@@ -101,13 +101,7 @@ public class Timer : MonoBehaviour {
         finished = true;
     }
     public int getScore() {
-        print("Score: " + score);
-        print((decimal)score/upperLimit);
-        print((1 - ((decimal)score / upperLimit)));
-        print((1 - ((decimal)score / upperLimit)) * 100 * multiplier);
-        scoreBeforeRound = ((1 - ((decimal)score / upperLimit)) * 100 * multiplier);
-        print(scoreBeforeRound);
-        //return (int)scoreBeforeRound;
+        
 		return ((int)(score * 1000));
     }
 

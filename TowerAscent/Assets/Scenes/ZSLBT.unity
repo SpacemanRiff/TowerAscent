@@ -262,6 +262,35 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98ff43b4cfffbf34a9c73480e1976188, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &70581614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1216969826}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 70581615}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &70581615
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1216969826}
+  m_GameObject: {fileID: 70581614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 865247803}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &83234919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,8 +1154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timer: {fileID: 425365520}
-  leaderboardManager: {fileID: 865247802}
   victorySound: {fileID: 8300000, guid: 1623f7a91160249439be5531fb18ebd8, type: 3}
+  leaderboardText: {fileID: 1558412453}
 --- !u!4 &322015151 stripped
 Transform:
   m_PrefabParentObject: {fileID: 495976, guid: 0675a8379cc5cbd4089ec396b882fade, type: 2}
@@ -1892,7 +1921,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012896461334, guid: e99eab5491549fa4a9d75339f74a979d, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e99eab5491549fa4a9d75339f74a979d, type: 2}
@@ -2701,11 +2730,35 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 458858, guid: c4539176e3d94634ebe6be9b37a72b91, type: 2}
   m_PrefabInternal: {fileID: 850921013}
---- !u!1 &865247802 stripped
+--- !u!1 &865247802
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1000011157792720, guid: a8b5aeb707140ce40a74cd08cfb2264a,
     type: 2}
   m_PrefabInternal: {fileID: 1216969826}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 865247803}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &865247803
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1216969826}
+  m_GameObject: {fileID: 865247802}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 70581615}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &868159695
 Prefab:
   m_ObjectHideFlags: 0
@@ -3035,13 +3088,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Make sure you enter \nyour name using the keyboard:\n"
+  m_Text: 'Loading...
+
+'
 --- !u!4 &1048606081 stripped
 Transform:
   m_PrefabParentObject: {fileID: 495976, guid: 0675a8379cc5cbd4089ec396b882fade, type: 2}
@@ -3750,7 +3805,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -86.923004, z: 0}
 --- !u!1001 &1356816133
 Prefab:
@@ -4019,7 +4074,7 @@ Transform:
   - {fileID: 18681525}
   - {fileID: 381649120}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1527139631
 Prefab:
@@ -4156,6 +4211,7 @@ GameObject:
   - component: {fileID: 1558412451}
   - component: {fileID: 1558412452}
   - component: {fileID: 1027537472}
+  - component: {fileID: 1558412453}
   m_Layer: 0
   m_Name: LeaderboardText
   m_TagString: Untagged
@@ -4189,6 +4245,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1558412450}
+--- !u!114 &1558412453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558412450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4d4239f319a8c345803ea986e5ff6bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeaderboardText: {fileID: 1027537472}
 --- !u!1001 &1594021513
 Prefab:
   m_ObjectHideFlags: 0
