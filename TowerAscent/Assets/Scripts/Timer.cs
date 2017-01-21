@@ -55,7 +55,7 @@ public class Timer : MonoBehaviour {
 			//min = Mathf.RoundToInt(score / 120);
 			
 
-			TimerText.text = ((min+":"+(zeroPlace+(score-(min*60)).ToString("F2"))).Replace(".",":"));
+			TimerText.text = ((min+":"+(zeroPlace+((score-(min*60)).ToString("F2")))).Replace(".",":"));
 
         }
 
