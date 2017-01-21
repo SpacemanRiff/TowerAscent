@@ -91,8 +91,9 @@ public class Timer : MonoBehaviour {
         rig.transform.position = rigPos;
         
 		GameObject helper = GameObject.FindGameObjectWithTag ("Helper");
-		helper.GetComponent<ArcherShooting> ().DestroyAllArrows ();
-        
+		if (helper != null) {
+			helper.GetComponent<ArcherShooting> ().DestroyAllArrows ();
+		}
         finished = false;
         
     }
