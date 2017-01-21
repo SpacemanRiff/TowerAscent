@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 870d152f5cec3eb4f8d730850aa13e1d
+timeCreated: 1484962024
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FTY IRONRIDER NCV
+  fontNames:
+  - FTY IRONRIDER NCV
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

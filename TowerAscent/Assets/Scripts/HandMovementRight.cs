@@ -14,7 +14,9 @@ public class HandMovementRight : MonoBehaviour {
 
     public HandMovementLeft otherHand;
 
-    private Valve.VR.EVRButtonId gripButton = Valve.VR.EVRButtonId.k_EButton_Grip;
+    public VRTK.VRTK_InteractGrab IGrab;
+
+private Valve.VR.EVRButtonId gripButton = Valve.VR.EVRButtonId.k_EButton_Grip;
     public bool gripButtonDown = false, gripButtonUp = false, gripButtonPressed = false;
     
     private Valve.VR.EVRButtonId restartButton = Valve.VR.EVRButtonId.k_EButton_ApplicationMenu;
@@ -59,6 +61,12 @@ public class HandMovementRight : MonoBehaviour {
 
         if (gripButtonUp) {
             handAnimator.SetBool("grabbing", false);
+            //IGrab.ForceRelease();
+        }
+
+        if (!gripButtonPressed) {
+            //handAnimator.SetBool("grabbing", false);
+            //IGrab.ForceRelease();
         }
     }
     void OnTriggerEnter(Collider other) {

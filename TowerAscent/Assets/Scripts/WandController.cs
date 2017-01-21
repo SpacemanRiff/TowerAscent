@@ -30,7 +30,7 @@ public class WandController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (controller == null)
         {

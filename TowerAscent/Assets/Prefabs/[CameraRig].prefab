@@ -5435,7 +5435,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013982334896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 0, z: -1.09}
+  m_LocalPosition: {x: -0.18, y: 0, z: -1.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000011895563094}
@@ -14250,6 +14250,7 @@ MonoBehaviour:
   rightHand: {fileID: 1431677291990656}
   timer: {fileID: 114000014106760940}
   otherHand: {fileID: 114000011501793540}
+  IGrab: {fileID: 114000011246269342}
   gripButtonDown: 0
   gripButtonUp: 0
   gripButtonPressed: 0
@@ -14301,6 +14302,7 @@ MonoBehaviour:
   leftHand: {fileID: 1763574777786686}
   timer: {fileID: 114000014106760940}
   otherHand: {fileID: 114000011332845180}
+  IGrab: {fileID: 114000010667263306}
   gripButtonDown: 0
   gripButtonUp: 1
   gripButtonPressed: 0

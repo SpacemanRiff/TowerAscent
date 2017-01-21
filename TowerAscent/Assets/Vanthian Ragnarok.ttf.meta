@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 2a8769693b762e541834b1ee78dbd932
+timeCreated: 1484962219
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Vanthian Ragnarok
+  fontNames:
+  - Vanthian Ragnarok
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
