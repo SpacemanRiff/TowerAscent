@@ -8,12 +8,14 @@ public class Level {
 	private GameObject prefab;
 	private string sceneName;
 	private string leaderboardName;
+	private Vector3 prefabDefaultScale;
 
 	public Level(GameObject prefab) {
 		this.prefab = prefab;
 		this.levelName = ConvertPrefabNameToLevelName(prefab.name);
 		this.sceneName = ConvertPrefabNameToSceneName(prefab.name);
 		this.leaderboardName = ConvertPrefabNameToLeaderboardName(prefab.name);
+		this.prefabDefaultScale = prefab.transform.localScale;
 	}
 
 	public string GetLevelName {
@@ -39,6 +41,12 @@ public class Level {
             return prefab;
         }
     }
+
+	public Vector3 GetPrefabDefaultScale {
+		get {
+			return prefabDefaultScale;
+		}
+	}
 
 	private string ConvertPrefabNameToLevelName(string prefabName) {
         //Level_1_Prefab
