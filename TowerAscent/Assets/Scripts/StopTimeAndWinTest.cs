@@ -81,9 +81,11 @@ public class StopTimeAndWinTest : MonoBehaviour {
             //timeConverter(LeaderboardEntry.m_nScore);
 
 
-            leaderboardText.UpdateLeaderboard("#"+LeaderboardEntry.m_nGlobalRank + " " + SteamFriends.GetFriendPersonaName(LeaderboardEntry.m_steamIDUser) + " " + timeConverter(LeaderboardEntry.m_nScore)+"\n");
-          
-            
+            leaderboardText.UpdateRanks(" " + LeaderboardEntry.m_nGlobalRank + ".\n");// + " " + SteamFriends.GetFriendPersonaName(LeaderboardEntry.m_steamIDUser) + " " + timeConverter(LeaderboardEntry.m_nScore)+"\n");
+            leaderboardText.UpdateNames(nameChopper(SteamFriends.GetFriendPersonaName(LeaderboardEntry.m_steamIDUser))+ "\n");
+            leaderboardText.UpdateTimes(timeConverter(LeaderboardEntry.m_nScore) + "\n");
+
+
         }
 
         //ShowLeaderboardVariables();
@@ -108,6 +110,15 @@ public class StopTimeAndWinTest : MonoBehaviour {
 
 
         return (min + ":" + sec + ":" + mill.Substring(0,2));
+    }
+
+    public string nameChopper(string name) {
+        if (name.Length > 11) {
+            name = (name.Substring(0, 10) + "...");
+        }
+
+        return name;
+
     }
 
 }

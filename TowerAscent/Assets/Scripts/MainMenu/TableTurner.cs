@@ -42,20 +42,25 @@ public class TableTurner : MonoBehaviour {
 		} else if (Input.GetKeyDown(KeyCode.RightArrow)) {
 			TurnRight();
 		}
-		transform.rotation= Quaternion.Lerp (transform.rotation, targetRotation , 10 * rotationSmoothness * Time.deltaTime);
+		
 
-		if (sideToScaleUp) {
-			sideToScaleUp.transform.localScale = Vector3.Lerp (sideToScaleUp.transform.localScale, 
-				new Vector3(sideToScaleUp.transform.localScale.x, 1, sideToScaleUp.transform.localScale.z), 
-				speedOfScaling * Time.deltaTime);
-		}
 
-		if (sideToScaleDown) {
-			sideToScaleDown.transform.localScale = Vector3.Lerp(sideToScaleDown.transform.localScale, 
-				new Vector3(sideToScaleDown.transform.localScale.x, yScaleWhileFlat, sideToScaleDown.transform.localScale.z),
-				speedOfScaling * Time.deltaTime);
-		}
+    }
 
+    void FixedUpdate() {
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 10 * rotationSmoothness * Time.deltaTime);
+
+        if (sideToScaleUp) {
+            sideToScaleUp.transform.localScale = Vector3.Lerp(sideToScaleUp.transform.localScale,
+                new Vector3(sideToScaleUp.transform.localScale.x, 1, sideToScaleUp.transform.localScale.z),
+                speedOfScaling * Time.deltaTime);
+        }
+
+        if (sideToScaleDown) {
+            sideToScaleDown.transform.localScale = Vector3.Lerp(sideToScaleDown.transform.localScale,
+                new Vector3(sideToScaleDown.transform.localScale.x, yScaleWhileFlat, sideToScaleDown.transform.localScale.z),
+                speedOfScaling * Time.deltaTime);
+        }
 
     }
 

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 098720bf21c746f4d8269c4ebc59b5bc
+timeCreated: 1484959721
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 200
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: BlackCastleMF
+  fontNames:
+  - BlackCastleMF
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
