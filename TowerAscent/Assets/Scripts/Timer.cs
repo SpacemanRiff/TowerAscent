@@ -112,4 +112,9 @@ public class Timer : MonoBehaviour {
             StartTime();
         }
     }
+
+	public void updateCameraRigPosition(Vector3 newPos){
+		rigPos = newPos;
+	
+	}
 }
