@@ -881,7 +881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: {fileID: 425365520}
   victorySound: {fileID: 8300000, guid: 1623f7a91160249439be5531fb18ebd8, type: 3}
-  leaderboardText: {fileID: 1558412453}
+  leaderboardTextRank1: {fileID: 1558412453}
+  leaderboardTextRank2: {fileID: 0}
 --- !u!4 &322015151 stripped
 Transform:
   m_PrefabParentObject: {fileID: 495976, guid: 0675a8379cc5cbd4089ec396b882fade, type: 2}

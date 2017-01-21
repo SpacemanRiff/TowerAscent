@@ -15,7 +15,8 @@ public class StopTimeAndWinTest : MonoBehaviour {
     private CallResult<LeaderboardScoresDownloaded_t> LeaderboardScoresDownloaded;
     private CallResult<PersonaStateChange_t> personaStat;
     private SteamLeaderboardEntries_t m_SteamLeaderboardEntries;
-    public LeaderboardPrint leaderboardText;
+    public LeaderboardPrint leaderboardTextRank1;
+	public LeaderboardPrint leaderboardTextRank2;
 
     void OnEnable() {
         LeaderboardScoresDownloaded = CallResult<LeaderboardScoresDownloaded_t>.Create(OnLeaderboardScoresDownloaded);
@@ -81,9 +82,16 @@ public class StopTimeAndWinTest : MonoBehaviour {
             //timeConverter(LeaderboardEntry.m_nScore);
 
 
-            leaderboardText.UpdateRanks(" " + LeaderboardEntry.m_nGlobalRank + ".\n");// + " " + SteamFriends.GetFriendPersonaName(LeaderboardEntry.m_steamIDUser) + " " + timeConverter(LeaderboardEntry.m_nScore)+"\n");
-            leaderboardText.UpdateNames(nameChopper(SteamFriends.GetFriendPersonaName(LeaderboardEntry.m_steamIDUser))+ "\n");
-            leaderboardText.UpdateTimes(timeConverter(LeaderboardEntry.m_nScore) + "\n");
+			leaderboardTextRank1.UpdateRanks(" " + LeaderboardEntry.m_nGlobalRank + ".\n");// + " " + SteamFriends.GetFriendPersonaName(LeaderboardEntry.m_steamIDUser) + " " + timeConverter(LeaderboardEntry.m_nScore)+"\n");
+			leaderboardTextRank1.UpdateNames(nameChopper(SteamFriends.GetFriendPersonaName(LeaderboardEntry.m_steamIDUser))+ "\n");
+			leaderboardTextRank1.UpdateTimes(timeConverter(LeaderboardEntry.m_nScore) + "\n");
+			if (leaderboardTextRank2 != null) {
+				leaderboardTextRank2.UpdateRanks(" " + LeaderboardEntry.m_nGlobalRank + ".\n");// + " " + SteamFriends.GetFriendPersonaName(LeaderboardEntry.m_steamIDUser) + " " + timeConverter(LeaderboardEntry.m_nScore)+"\n");
+				leaderboardTextRank2.UpdateNames(nameChopper(SteamFriends.GetFriendPersonaName(LeaderboardEntry.m_steamIDUser))+ "\n");
+				leaderboardTextRank2.UpdateTimes(timeConverter(LeaderboardEntry.m_nScore) + "\n");
+			
+			}
+
 
 
         }
