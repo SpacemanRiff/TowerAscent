@@ -6,10 +6,13 @@
 
 using UnityEngine;
 using Valve.VR;
+//using UnityEngine.UI;
 
 [RequireComponent(typeof(Camera))]
 public class SteamVR_UpdatePoses : MonoBehaviour
 {
+    //public Canvas canvas;
+    //public GameObject hand;
 	void Awake()
 	{
 		var camera = GetComponent<Camera>();
@@ -25,6 +28,9 @@ public class SteamVR_UpdatePoses : MonoBehaviour
 		var compositor = OpenVR.Compositor;
 		if (compositor != null)
 		{
+            //if (Time.fixedTime > 1.0f) {
+             //   canvas.transform.position = hand.transform.position;
+            //} 
 			var render = SteamVR_Render.instance;
 			compositor.GetLastPoses(render.poses, render.gamePoses);
 			SteamVR_Utils.Event.Send("new_poses", render.poses);

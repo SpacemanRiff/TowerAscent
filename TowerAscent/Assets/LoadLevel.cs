@@ -11,7 +11,7 @@ public class LoadLevel : MonoBehaviour {
         VRLoadLevel.levelName = levelName;
     }
 
-    void onTriggerEnter(Collider other) {
+    void OnTriggerEnter(Collider other) {
         if (other.tag == "VRController") {
             VRLoadLevel.Trigger();
         }
