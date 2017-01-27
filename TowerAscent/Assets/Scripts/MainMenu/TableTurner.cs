@@ -23,11 +23,11 @@ public class TableTurner : MonoBehaviour {
 
     private void Start() {
         sides = new LinkedList<GameObject>(cubeSides);
-		InitializeFaces1();
+		InitializeFaces();
 		targetRotation = transform.rotation;
     }
 
-	public void InitializeFaces1() {
+	public void InitializeFaces() {
 		PutLevelOnFace(levelManager.GetCurrentLevel(), sides.ElementAt(0));
 		PutLevelOnFace(levelManager.GetNextLevel(), sides.ElementAt(1));
 		PutLevelOnFace(levelManager.GetPreviousLevel(), sides.ElementAt(3));
