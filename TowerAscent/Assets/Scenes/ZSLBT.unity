@@ -8554,6 +8554,57 @@ Transform:
   m_Father: {fileID: 1335415881}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &872046081
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000010121763346, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010121763346, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010121763346, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010121763346, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010121763346, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010121763346, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010121763346, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010121763346, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014106760940, guid: a4c18d2a8300a84419cf9d893a8d4481,
+        type: 2}
+      propertyPath: TimerText
+      value: 
+      objectReference: {fileID: 1405540045}
+    - target: {fileID: 1000013982334896, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
+      propertyPath: m_Name
+      value: '[CameraRig] (2)'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a4c18d2a8300a84419cf9d893a8d4481, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &877879973 stripped
 Transform:
   m_PrefabParentObject: {fileID: 458858, guid: c4539176e3d94634ebe6be9b37a72b91, type: 2}
@@ -15299,7 +15350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1596149213
 Transform:
   m_ObjectHideFlags: 0
@@ -15461,7 +15512,7 @@ MonoBehaviour:
   useGravity: 1
   gravityFallHeight: 1
   blinkYThreshold: 0.1
-  floorHeightTolerance: 1
+  floorHeightTolerance: 0.2
 --- !u!114 &1596149218
 MonoBehaviour:
   m_ObjectHideFlags: 0
