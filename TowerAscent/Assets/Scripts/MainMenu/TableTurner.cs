@@ -64,7 +64,7 @@ public class TableTurner : MonoBehaviour {
 
     }
 
-    private void TurnLeft() {//Currently that is next level
+    public void TurnLeft() {//Currently that is next level
         levelManager.GoToNextLevel();
         Level nextLevel = levelManager.GetNextLevel();
         PutLevelOnBottom(nextLevel);
@@ -76,7 +76,7 @@ public class TableTurner : MonoBehaviour {
         DestroyBottomPrefab();
     }
 
-    private void TurnRight() {//Previous
+    public void TurnRight() {//Previous
 		levelManager.GoToPreviousLevel();
 		Level previousLevel = levelManager.GetPreviousLevel();
 		PutLevelOnBottom(previousLevel);
