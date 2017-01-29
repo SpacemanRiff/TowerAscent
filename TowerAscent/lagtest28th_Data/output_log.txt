@@ -1,0 +1,121 @@
+Mono path[0] = 'H:/TowerAscent/TowerAscent/lagtest28th_Data/Managed'
+Mono path[1] = 'H:/TowerAscent/TowerAscent/lagtest28th_Data/Mono'
+Mono config path = 'H:/TowerAscent/TowerAscent/lagtest28th_Data/Mono/etc'
+PlayerConnection initialized from H:/TowerAscent/TowerAscent/lagtest28th_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55083
+Multi-casting "[IP] 25.80.82.221 [Port] 55083 [Flags] 2 [Guid] 2152803140 [EditorId] 1666491785 [Version] 1048832 [Id] WindowsPlayer(Kitsune-PC) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55083]
+PlayerConnection already initialized - listening to [0.0.0.0:55083]
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Radeon (TM) RX 480 Graphics (ID=0x67df)
+    Vendor:   ATI
+    VRAM:     8137 MB
+    Driver:   21.19.137.1
+Begin MonoManager ReloadAssembly
+Platform assembly: H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\UnityEngine.VR.dll (this message is harmless)
+Loading H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
+Platform assembly: H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\CoherentNoise.dll (this message is harmless)
+Loading H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\CoherentNoise.dll into Unity Child Domain
+- Completed reload, in  0.768 seconds
+Platform assembly: H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: H:\TowerAscent\TowerAscent\lagtest28th_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+OpenVR initialized!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/VR/OpenVR/OpenVR.cpp Line: 381)
+
+UnloadTime: 1.305553 ms
+Connected to lighthouse:LHR-439DDDDA
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+SteamVR:.ctor() (at H:\TowerAscent\TowerAscent\Assets\SteamVR\Scripts\SteamVR.cs:256)
+SteamVR:CreateInstance() (at H:\TowerAscent\TowerAscent\Assets\SteamVR\Scripts\SteamVR.cs:97)
+SteamVR:get_instance() (at H:\TowerAscent\TowerAscent\Assets\SteamVR\Scripts\SteamVR.cs:48)
+SteamVR_Render:OnEnable() (at H:\TowerAscent\TowerAscent\Assets\SteamVR\Scripts\SteamVR_Render.cs:283)
+ 
+(Filename: H:/TowerAscent/TowerAscent/Assets/SteamVR/Scripts/SteamVR.cs Line: 256)
+
+ArmSwinger.verifySettings():: Fixed Timestep is set to 0.02.  Since you have generalAutoAdjustFixedTimestep set to true, ArmSwinger will auto adjust this value to 0.01111111 (90 steps per second) for you.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+ArmSwinger:verifySettings() (at H:\TowerAscent\TowerAscent\Assets\ArmSwinger\ArmSwinger-master\ArmSwinger-master\scripts\ArmSwinger.cs:447)
+ArmSwinger:Awake() (at H:\TowerAscent\TowerAscent\Assets\ArmSwinger\ArmSwinger-master\ArmSwinger-master\scripts\ArmSwinger.cs:356)
+ 
+(Filename: H:/TowerAscent/TowerAscent/Assets/ArmSwinger/ArmSwinger-master/ArmSwinger-master/scripts/ArmSwinger.cs Line: 447)
+
+Can't add component 'Rigidbody' to Camera (eye) because such a component is already added to the game object!
+UnityEngine.GameObject:Internal_AddComponentWithType(Type)
+UnityEngine.GameObject:AddComponent(Type) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\GameObjectBindings.gen.cs:352)
+UnityEngine.GameObject:AddComponent() (at C:\buildslave\unity\build\artifacts\generated\common\runtime\GameObjectBindings.gen.cs:357)
+VRTK.VRTK_HeadsetCollision:OnEnable() (at H:\TowerAscent\TowerAscent\Assets\VRTK\Scripts\VRTK_HeadsetCollision.cs:89)
+UnityEngine.GameObject:Internal_AddComponentWithType(Type)
+UnityEngine.GameObject:AddComponent(Type) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\GameObjectBindings.gen.cs:352)
+UnityEngine.GameObject:AddComponent() (at C:\buildslave\unity\build\artifacts\generated\common\runtime\GameObjectBindings.gen.cs:357)
+VRTK.VRTK_HeadsetCollisionFade:OnEnable() (at H:\TowerAscent\TowerAscent\Assets\VRTK\Scripts\VRTK_HeadsetCollisionFade.cs:35)
+
+[C:/buildslave/unity/build/Runtime/Export/GameObjectExport.cpp line 99] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/GameObjectBindings.gen.cs Line: 352)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at VRTK.VRTK_HeadsetCollision.OnEnable () [0x00055] in H:\TowerAscent\TowerAscent\Assets\VRTK\Scripts\VRTK_HeadsetCollision.cs:90 
+UnityEngine.GameObject:Internal_AddComponentWithType(Type)
+UnityEngine.GameObject:AddComponent(Type) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\GameObjectBindings.gen.cs:352)
+UnityEngine.GameObject:AddComponent() (at C:\buildslave\unity\build\artifacts\generated\common\runtime\GameObjectBindings.gen.cs:357)
+VRTK.VRTK_HeadsetCollisionFade:OnEnable() (at H:\TowerAscent\TowerAscent\Assets\VRTK\Scripts\VRTK_HeadsetCollisionFade.cs:35)
+ 
+(Filename: H:/TowerAscent/TowerAscent/Assets/VRTK/Scripts/VRTK_HeadsetCollision.cs Line: 90)
+
+HeadsetCollider.Start():: There is already a RigidBody on your headset, but it is kinematic.  Prevent Wall Clip will fail.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+HeadsetCollider:Start() (at H:\TowerAscent\TowerAscent\Assets\ArmSwinger\ArmSwinger-master\ArmSwinger-master\scripts\HeadsetCollider.cs:64)
+ 
+(Filename: H:/TowerAscent/TowerAscent/Assets/ArmSwinger/ArmSwinger-master/ArmSwinger-master/scripts/HeadsetCollider.cs Line: 64)
+
+HeadsetCollider.Start():: There is already a RigidBody on your headset, but it does not have all constraints frozen.  Physics with the headset may be erratic.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+HeadsetCollider:Start() (at H:\TowerAscent\TowerAscent\Assets\ArmSwinger\ArmSwinger-master\ArmSwinger-master\scripts\HeadsetCollider.cs:67)
+ 
+(Filename: H:/TowerAscent/TowerAscent/Assets/ArmSwinger/ArmSwinger-master/ArmSwinger-master/scripts/HeadsetCollider.cs Line: 67)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2350 -> priority: 1 
+BoxColliders does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "[CameraRig] (1)/Controller (left)/robotHandAnimatedLeft/Hand/TimerHolder/Cube (2)"
+ 
+(Filename:  Line: 0)
+
+OpenVR Shutdown
+ 
+(Filename: C:/buildslave/unity/build/Runtime/VR/OpenVR/OpenVR.cpp Line: 815)
+

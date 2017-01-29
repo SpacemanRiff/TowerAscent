@@ -306,6 +306,8 @@ namespace VRTK
         private Vector3 controllerVelocity = Vector3.zero;
         private Vector3 controllerAngularVelocity = Vector3.zero;
 
+		public VRTK_InteractGrab IGrab;//change later ungrip
+
         public virtual void OnTriggerPressed(ControllerInteractionEventArgs e)
         {
             if (TriggerPressed != null)
@@ -873,7 +875,7 @@ namespace VRTK
             }
         }
 
-        private void Update()
+        private void Update()//ungrip test fix DOES NOT FIX GLITCH
         {
             CacheControllerIndex();
             //Only continue if the controller index has been set to a sensible number
@@ -966,6 +968,8 @@ namespace VRTK
             {
                 OnGripReleased(SetButtonEvent(ref gripPressed, false, 0f));
                 EmitAlias(ButtonAlias.Grip, false, 0f, ref gripPressed);
+				//ungrip fix attempt. Possibly works, not fully tested, commented for now
+				IGrab.ForceRelease();
             }
 
             //Touchpad Pressed
