@@ -48,12 +48,12 @@ public class YOYOUBEENSPOTTED : MonoBehaviour {
 
 					if (hit.transform.gameObject.tag == tagToCheckAgainst  ) {
                     //CODE TO EXECUTE IF THE PLAYER IS CURRENTLY SEEN BY THIS OBJECT
-                        Debug.Log ("YO " + other.gameObject.name + ", YOU BEIN WATCHED BY" + this.name);
+                        //Debug.Log ("YO " + other.gameObject.name + ", YOU BEIN WATCHED BY" + this.name);
                     //timer.reset();
                     //audioSource.PlayOneShot(alertSound, 1.00f);
                 } else {
 						//WHEN PLAYER IS IN THIS OBJECTS FIELD OF VIEW BUT IS NOT ACTUALLY "SEEN"
-						Debug.Log ("YO " + other.gameObject.name + " IS IN " + this.name + "'S FIELD OF VISION. HOWEVER, " + other.gameObject.name + " IS NOT SEEN BECAUSE VISION IS BLOCKED BY " + hit.transform.name);
+						//Debug.Log ("YO " + other.gameObject.name + " IS IN " + this.name + "'S FIELD OF VISION. HOWEVER, " + other.gameObject.name + " IS NOT SEEN BECAUSE VISION IS BLOCKED BY " + hit.transform.name);
 					}
 			}
 		}

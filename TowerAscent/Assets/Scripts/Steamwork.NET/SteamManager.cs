@@ -152,7 +152,7 @@ class SteamManager : MonoBehaviour {
                 print("Achieved");
             }
         } else {
-            print("Not Successful");
+            //print("Not Successful"); Todd change
         }
     }
 

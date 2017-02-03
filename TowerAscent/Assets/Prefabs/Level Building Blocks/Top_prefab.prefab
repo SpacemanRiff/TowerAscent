@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 136000010357721282}
   - component: {fileID: 114000013048031666}
   - component: {fileID: 82000012892812864}
+  - component: {fileID: 114189578524133168}
   m_Layer: 0
   m_Name: Banner_a
   m_TagString: Untagged
@@ -268,7 +269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1039267017654564
 GameObject:
   m_ObjectHideFlags: 1
@@ -804,7 +805,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011089787092}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 75, z: 7}
+  m_LocalPosition: {x: 0, y: 20, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000011414350130}
@@ -2315,7 +2316,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013476707638}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 714a77b5f47f5b040ac83384505e5fa9, type: 3}
   m_Name: 
@@ -2407,6 +2408,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114189578524133168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013413159896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfb314e2bc95824c9f8a9507ded7dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
+  victorySound: {fileID: 8300000, guid: 1623f7a91160249439be5531fb18ebd8, type: 3}
+  leaderboardTextRank1: {fileID: 0}
+  leaderboardTextRank2: {fileID: 0}
 --- !u!114 &114244490623927660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2747,7 +2763,7 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 4000011942550810}
   m_AABB:
-    m_Center: {x: 0.0000038146973, y: -0.00036999115, z: 3.087131}
+    m_Center: {x: 0.0000009536743, y: -0.00036999112, z: 3.087131}
     m_Extent: {x: 0.6860507, y: 0.151081, z: 1.5527455}
   m_DirtyAABB: 0
 --- !u!183 &183000010548501510
